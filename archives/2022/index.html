@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.0.0">
+<meta name="generator" content="Hexo 5.4.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -95,6 +95,7 @@
       <h1 class="site-title">Live's Blog</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
+      <p class="site-subtitle" itemprop="description">I am.</p>
   </div>
 
   <div class="site-nav-right">
@@ -111,6 +112,16 @@
         <li class="menu-item menu-item-home">
 
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
 
   </li>
         <li class="menu-item menu-item-archives">
@@ -148,13 +159,33 @@
   <div class="post-block">
     <div class="posts-collapse">
       <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 1 篇日志。 继续努力。</span>
+        <span class="collection-header">嗯..! 目前共计 2 篇日志。 继续努力。</span>
       </div>
 
       
     <div class="collection-year">
       <span class="collection-header">2022</span>
     </div>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2022-02-14T13:46:01+08:00"
+              content="2022-02-14">
+          02-14
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2022/02/14/Test/" itemprop="url">
+            <span itemprop="name">Test</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
 
   <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
@@ -240,6 +271,8 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Live"
+      src="/images/avatar.gif">
   <p class="site-author-name" itemprop="name">Live</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -248,12 +281,35 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:2098412209@qq.com" title="E-Mail → mailto:2098412209@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=2098412209&site=qq&menu=yes" title="QQ → http:&#x2F;&#x2F;wpa.qq.com&#x2F;msgrd?v&#x3D;3&amp;uin&#x3D;2098412209&amp;site&#x3D;qq&amp;menu&#x3D;yes" rel="noopener" target="_blank"><i class="fab fa-qq fa-fw"></i>QQ</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.luogu.com.cn/user/109659" title="Luogu → https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;user&#x2F;109659" rel="noopener" target="_blank"><i class=" fa-fw"></i>Luogu</a>
+      </span>
+  </div>
 
 
 
@@ -335,6 +391,62 @@
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
 
 </body>
 </html>

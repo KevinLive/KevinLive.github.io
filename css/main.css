@@ -961,7 +961,7 @@ pre .javascript .function {
   padding: 0 10px;
 }
 .headband {
-  background: #222;
+  background: transparent;
   height: 3px;
 }
 .site-meta {
@@ -1168,7 +1168,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #8585f0;
+  background: #ff24ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2141,6 +2141,21 @@ ul.breadcrumb li + li:last-child {
 .tag-cloud a:hover {
   color: var(--link-hover-color) !important;
 }
+.gt-header a,
+.gt-comments a,
+.gt-popup a {
+  border-bottom: none;
+}
+.gt-container .gt-popup .gt-action.is--active::before {
+  top: 0.7em;
+}
+mjx-container[jax="CHTML"][display="true"],
+.has-jax {
+  overflow: auto hidden;
+}
+mjx-container + br {
+  display: none;
+}
 .header {
   margin: 0 auto;
   position: relative;
@@ -2562,4 +2577,12 @@ ul.breadcrumb li + li:last-child {
   .pagination {
     margin: 8px 0 0;
   }
+}
+body {
+  background: url("/images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+  opacity: 0.8;
 }
