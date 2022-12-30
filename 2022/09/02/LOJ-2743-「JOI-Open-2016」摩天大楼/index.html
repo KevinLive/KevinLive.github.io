@@ -28,7 +28,7 @@
 <meta property="og:description" content="经典 DP，费用提前计算的思想。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-09-02T01:16:19.000Z">
-<meta property="article:modified_time" content="2022-09-02T08:15:46.766Z">
+<meta property="article:modified_time" content="2022-12-25T01:05:55.078Z">
 <meta property="article:author" content="Live">
 <meta property="article:tag" content="DP">
 <meta property="article:tag" content="题解">
@@ -214,10 +214,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-09-02 09:16:19 / 修改时间：16:15:46" itemprop="dateCreated datePublished" datetime="2022-09-02T09:16:19+08:00">2022-09-02</time>
+              <time title="创建时间：2022-09-02 09:16:19" itemprop="dateCreated datePublished" datetime="2022-09-02T09:16:19+08:00">2022-09-02</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-12-25 09:05:55" itemprop="dateModified" datetime="2022-12-25T09:05:55+08:00">2022-12-25</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -256,7 +262,6 @@
         <p>经典 DP，费用提前计算的思想。</p>
 <span id="more"></span>
 
-<p><a target="_blank" rel="noopener" href="https://loj.ac/p/2743">题目链接</a></p>
 <p>对于序列类型的 DP 题，我们可以想到用分段型 DP，每次将当前的数插入进去，求解方案数。但是这道题的并费用不好直接计算。</p>
 <p>先将 $a$ 排序，并从小到大插入。对于 $i&lt;j$ ，有 $|a_i-a_j|&#x3D;\sum_{k&#x3D;i}^{j-1} a_{k+1}-a_k$。根据这个我们可以尝试进行<strong>费用提前计算</strong>。对于之后每个插在当前的 $k$ 个端点上的数，会一共产生 $(a_{i+1}-a_{i})\times k$ 的费用。</p>
 <p>状态转移比较套路。注意边界上是没有花费的，所以还需要将边界上填了多少个记录进状态。</p>
@@ -366,7 +371,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">30</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -379,7 +384,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="最短路， 好题。">
+  <meta name="description" content="最短路DAG。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="P2505 [HAOI2012]道路">
 <meta property="og:url" content="http://example.com/2022/03/05/P2505-HAOI2012-%E9%81%93%E8%B7%AF/index.html">
 <meta property="og:site_name" content="Live&#39;s Blog">
-<meta property="og:description" content="最短路， 好题。">
+<meta property="og:description" content="最短路DAG。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-05T13:49:32.000Z">
-<meta property="article:modified_time" content="2022-08-30T09:20:02.278Z">
+<meta property="article:modified_time" content="2022-12-25T01:07:01.105Z">
 <meta property="article:author" content="Live">
 <meta property="article:tag" content="图论">
 <meta property="article:tag" content="题解">
@@ -224,7 +224,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-08-30 17:20:02" itemprop="dateModified" datetime="2022-08-30T17:20:02+08:00">2022-08-30</time>
+                <time title="修改时间：2022-12-25 09:07:01" itemprop="dateModified" datetime="2022-12-25T09:07:01+08:00">2022-12-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -261,10 +261,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>最短路， 好题。</p>
+        <p>最短路DAG。</p>
 <span id="more"></span>
 
-<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2505">题目链接</a></p>
 <p>首先，我们很容易知道：$i\to j$ 的最短路径的任意子路径 $u\to v$ 都是最短路径，接着我们可以得到另一个结论：若存在一条子路径 $u\to v$ 不是最短路径，那么很明显可以找到一条更短的 $u\to v$ 使得 $i\to j$ 更短。根据这个原则，我们可以得出在固定源点下，存在 $G$ 的一个子图 $G’$，使得 $G’$ 的每一条边都在 $S$ 到其他至少一个点的最短路径上，且 $G’$ 以外的边不在 $S$ 到任意一个点的最短路径上。这里把称 $G’$ 为源点为 $S$  时 $G$ 的<strong>最短路图</strong>。而求出最短路图的方式很简单，就是如果有 $dis_{v_i}&#x3D;dis_{u_i}+w_i$，我们给这条路打上一个标记就行了。</p>
 <p>容易得到这个最短路图是无环的，我们就可以在<strong>最短路图</strong>上进行<strong>拓扑排序</strong>。考虑维护两个数组为 $cnt1_i$ 与 $cnt2_i$ 。接着我们考虑正反两次拓扑分别表示 $i\to u$ 和 $v\to j$ 的最短路径条数，而答案就为 $cnt1_{u_i}*cnt2_{v_i}$ 之和。</p>
 <details>
@@ -375,7 +374,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">30</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -388,7 +387,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
