@@ -28,7 +28,7 @@
 <meta property="og:description" content="可以说是 DP 乱做。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-08-26T06:56:21.000Z">
-<meta property="article:modified_time" content="2022-09-19T13:36:20.405Z">
+<meta property="article:modified_time" content="2023-01-04T10:31:42.271Z">
 <meta property="article:author" content="Live">
 <meta property="article:tag" content="DP">
 <meta name="twitter:card" content="summary">
@@ -221,7 +221,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-19 21:36:20" itemprop="dateModified" datetime="2022-09-19T21:36:20+08:00">2022-09-19</time>
+                <time title="修改时间：2023-01-04 18:31:42" itemprop="dateModified" datetime="2023-01-04T18:31:42+08:00">2023-01-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -265,7 +265,7 @@
 <h4 id="1-P7077-CSP-S2020-函数调用"><a href="#1-P7077-CSP-S2020-函数调用" class="headerlink" title="1.P7077 [CSP-S2020] 函数调用"></a>1.<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P7077">P7077 [CSP-S2020] 函数调用</a></h4><p>很明显各个函数的调用关系是一张 DAG。假如只有函数 2，我们就只需要 dfs 一遍就可以求出所有函数的 $mul_i$。我们并不好处理先进行函数 1 再进行函数 2 的情况。于是我们考虑再求出一个 $add_i$ 表示调用完所有函数后第 $i$ 个数的增量。</p>
 <p>容易想到在拓扑序 DP 来求这个东西。其实想要求 $add$ 数组很简单，乘 $k$ 也看作将该函数被执行 $k$ 次，我们只需要求出每个函数被执行了多少次，这个我们用 $f_i$ 表示函数 $i$ 被执行了多少次。</p>
 <p>因为我们是按照拓扑序来考虑每个函数，而非函数本来的执行顺序。所以我们需要先考虑 $f$ 的初值。$res$ 是一个动态维护的值，表示在第 $i$ 个执行的函数被执行了 $res$ 次（注意上文所说的“被执行”）。对于三种类型的函数分开讨论：1.直接加上 $res$；2.用 $res$ 乘上 $mul_{fuc_i}$（不用加上 $res$，因为我们们根本不关心函数 2 的 $f$ 值）；3.先加上 $res$ ，再用 $res$ 乘上 $mul_{fuc_i}$。</p>
-<p>接着我们考虑 DP，设当前节点为 $x$。还是对于三种类型的函数分开讨论：1.直接计算 $add_{pos_x}$；2.根本不用管；3.我们尝试倒序遍历其所有出点，就像上面求初值一样来处理所有出点的 $f$ 值（<del>不是吗？</del>），只不过不需要讨论类型，还有最开始的 $res$ 的值应该为 $f_x$ 。</p>
+<p>接着我们考虑 DP，设当前节点为 $x$。还是对于三种类型的函数分开讨论：1.直接计算 $add_{pos_x}$；2.根本不用管；3.我们尝试倒序遍历其所有出点，就像上面求初值一样来处理所有出点的 $f$ 值，只不过不需要讨论类型，还有最开始的 $res$ 的值应该为 $f_x$ 。</p>
 <p>似乎就这样做完了。。。</p>
 <details>
     <summary>查看代码</summary>
@@ -279,7 +279,7 @@
 <p>从之前的状态转移到当前状态显然不好搞，所以考虑从当前状态向之后的状态进行转移。同时最后一层枚举 $t$，表示选  $t$  个 $i$。似乎很容易得到状态的转移：</p>
 <p>$f_{i+1,j+t,k+(t+p)\&amp;1,\frac{(t+p)}{2}}\gets f_{i,j,k,p}$。</p>
 <p>因为权值是一个乘积和的形式，我们也可以尝试拆贡献，也可以比较容易得到：$v_i^t\times C_{n-j}^{t}$。然后就转移就可以了。时间复杂度$\mathcal O(n^4m)$。</p>
-<p>其实还可以用滚动数组优化一下，<del>虽然没什么用</del>。</p>
+<p>其实还可以用滚动数组优化一下，<del>但影响不大</del>。</p>
 <details>
     <summary>查看代码</summary>
 
@@ -318,8 +318,8 @@
       <i class="fa fa-chevron-left"></i> Kruskal 重构树
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/08/29/P6186-NOI-Online-1-%E6%8F%90%E9%AB%98%E7%BB%84-%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" rel="next" title="P6186 [NOI Online">
-      P6186 [NOI Online <i class="fa fa-chevron-right"></i>
+    <a href="/2022/08/29/P6186-NOI-Online-1-%E6%8F%90%E9%AB%98%E7%BB%84-%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" rel="next" title="P6186 [NOI Online #1 提高组] 冒泡排序">
+      P6186 [NOI Online #1 提高组] 冒泡排序 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -396,7 +396,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">33</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -409,7 +409,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-count">36</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -454,11 +454,21 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Live</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">171k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:36</span>
 </div>
 
         
