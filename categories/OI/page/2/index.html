@@ -19,7 +19,7 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
-
+  <style type="text/css">details.note,details.success,details.failure,details.warning,details.info,details.question,details.example,details.quote,details.code{display:block!important;padding-top:0!important;box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2)!important;position:relative!important;margin:1.5625em 0!important;padding:0 1em!important;border-left:.2em solid!important;border-radius:.1em!important;font-size:.9em!important;overflow:auto!important;}details.note:not([open]),details.success:not([open]),details.failure:not([open]),details.warning:not([open]),details.info:not([open]),details.question:not([open]),details.example:not([open]),details.quote:not([open]),details.code:not([open]){padding-bottom:0!important;}details.note{border-left-color:#448aff!important;}details.success{border-left-color:#00c853!important;}details.failure{border-left-color:#ff5252!important;}details.warning{border-left-color:#ff9100!important;}details.info{border-left-color:#00b8d4!important;}details.question{border-left-color:#64dd17!important;}details.example{border-left-color:#651fff!important;}details.quote{border-left-color:#9e9e9e!important;}details.code{border-left-color:#a0a0a0!important;}details.note>summary,details.success>summary,details.failure>summary,details.warning>summary,details.info>summary,details.question>summary,details.example>summary,details.quote>summary,details.code>summary{margin:0 -1em 1em -1em;padding:.4em .6em .4em .6em;border-bottom:.05em solid;font-weight:700;display:block;outline:none;cursor:pointer;}details.note>summary{border-bottom-color:rgba(68,138,255,.1);background-color:rgba(68,138,255,.1);}details.success>summary{border-bottom-color:rgba(0,200,83,.1);background-color:rgba(0,200,83,.1);}details.failure>summary{border-bottom-color:rgba(255,82,82,.1);background-color:rgba(255,82,82,.1);}details.warning>summary{border-bottom-color:rgba(255,145,0,.1);background-color:rgba(255,145,0,.1);}details.info>summary{border-bottom-color:rgba(0,184,212,.1);background-color:rgba(0,184,212,.1);}details.question>summary{border-bottom-color:rgba(100,221,23,.1);background-color:rgba(100,221,23,.1);}details.example>summary{border-bottom-color:rgba(101,31,255,.1);background-color:rgba(101,31,255,.1);}details.quote>summary{border-bottom-color:rgba(158,158,158,.1);background-color:rgba(158,158,158,.1);}details.code>summary{border-bottom-color:rgba(160,160,160,.1);background-color:rgba(160,160,160,.1);}details.note:not([open])>summary,details.success:not([open])>summary,details.failure:not([open])>summary,details.warning:not([open])>summary,details.info:not([open])>summary,details.question:not([open])>summary,details.example:not([open])>summary,details.quote:not([open])>summary,details.code:not([open])>summary{border-bottom:0;margin-bottom:0;}details.note>summary>div.box-open-button,details.success>summary>div.box-open-button,details.failure>summary>div.box-open-button,details.warning>summary>div.box-open-button,details.info>summary>div.box-open-button,details.question>summary>div.box-open-button,details.example>summary>div.box-open-button,details.quote>summary>div.box-open-button,details.code>summary>div.box-open-button{float:right;}details.note>summary>i,details.success>summary>i,details.failure>summary>i,details.warning>summary>i,details.info>summary>i,details.question>summary>i,details.example>summary>i,details.quote>summary>i,details.code>summary>i,details.note>summary>div.box-open-button>i,details.success>summary>div.box-open-button>i,details.failure>summary>div.box-open-button>i,details.warning>summary>div.box-open-button>i,details.info>summary>div.box-open-button>i,details.question>summary>div.box-open-button>i,details.example>summary>div.box-open-button>i,details.quote>summary>div.box-open-button>i,details.code>summary>div.box-open-button>i{margin:0 .6125em 0 .6125em;}details.note>summary>i{color:#448aff;}details.success>summary>i{color:#00c853;}details.failure>summary>i{color:#ff5252;}details.warning>summary>i{color:#ff9100;}details.info>summary>i{color:#00b8d4;}details.question>summary>i{color:#64dd17;}details.example>summary>i{color:#651fff;}details.quote>summary>i{color:#9e9e9e;}details.code>summary>i{color:#a0a0a0;}details.note>summary>div.box-open-button>i,details.success>summary>div.box-open-button>i,details.failure>summary>div.box-open-button>i,details.warning>summary>div.box-open-button>i,details.info>summary>div.box-open-button>i,details.question>summary>div.box-open-button>i,details.example>summary>div.box-open-button>i,details.quote>summary>div.box-open-button>i,details.code>summary>div.box-open-button>i{color:rgba(0,0,0,.26);}details[open].note>summary>div.box-open-button>i,details[open].success>summary>div.box-open-button>i,details[open].failure>summary>div.box-open-button>i,details[open].warning>summary>div.box-open-button>i,details[open].info>summary>div.box-open-button>i,details[open].question>summary>div.box-open-button>i,details[open].example>summary>div.box-open-button>i,details[open].quote>summary>div.box-open-button>i,details[open].code>summary>div.box-open-button>i{transform:rotate(180deg);}</style>
   <meta property="og:type" content="website">
 <meta property="og:title" content="Live&#39;s Blog">
 <meta property="og:url" content="http://example.com/categories/OI/page/2/index.html">
@@ -195,6 +195,69 @@
 
       
     <div class="collection-year">
+      <span class="collection-header">2023</span>
+    </div>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2023-01-12T08:25:36+08:00"
+              content="2023-01-12">
+          01-12
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2023/01/12/%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0/" itemprop="url">
+            <span itemprop="name">生成函数</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2023-01-04T18:18:32+08:00"
+              content="2023-01-04">
+          01-04
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2023/01/04/CF671D-Roads-in-Yusland/" itemprop="url">
+            <span itemprop="name">CF671D Roads in Yusland</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2023-01-02T20:40:58+08:00"
+              content="2023-01-02">
+          01-02
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2023/01/02/P8907-USACO22DEC-Making-Friends-P/" itemprop="url">
+            <span itemprop="name">P8907 [USACO22DEC] Making Friends P</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
+    <div class="collection-year">
       <span class="collection-header">2022</span>
     </div>
 
@@ -203,15 +266,15 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2022-09-19T21:35:34+08:00"
-              content="2022-09-19">
-          09-19
+              datetime="2022-12-30T08:56:22+08:00"
+              content="2022-12-30">
+          12-30
         </time>
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2022/09/19/AT5799-AGC043B-123-Triangle/" itemprop="url">
-            <span itemprop="name">AT5799 [AGC043B] 123 Triangle</span>
+          <a class="post-title-link" href="/2022/12/30/P8917-DMOI-R2-%E9%A3%8E%E7%A5%9E%E7%9E%B3%EF%BC%88Aeolus-Hitomi%EF%BC%89/" itemprop="url">
+            <span itemprop="name">P8917 [DMOI-R2] 风神瞳（Aeolus Hitomi）</span>
           </a>
       </div>
 
@@ -223,15 +286,15 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2022-09-15T14:43:48+08:00"
-              content="2022-09-15">
-          09-15
+              datetime="2022-12-25T08:53:45+08:00"
+              content="2022-12-25">
+          12-25
         </time>
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2022/09/15/P3960-NOIP2017-%E6%8F%90%E9%AB%98%E7%BB%84-%E5%88%97%E9%98%9F/" itemprop="url">
-            <span itemprop="name">P3960 [NOIP2017 提高组] 列队</span>
+          <a class="post-title-link" href="/2022/12/25/LOJ-3340-%E3%80%8CNOI2020%E3%80%8D%E5%91%BD%E8%BF%90/" itemprop="url">
+            <span itemprop="name">LOJ#3340. 「NOI2020」命运</span>
           </a>
       </div>
 
@@ -243,15 +306,15 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2022-09-03T10:30:48+08:00"
-              content="2022-09-03">
-          09-03
+              datetime="2022-12-07T16:46:42+08:00"
+              content="2022-12-07">
+          12-07
         </time>
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2022/09/03/P3177-HAOI2015-%E6%A0%91%E4%B8%8A%E6%9F%93%E8%89%B2/" itemprop="url">
-            <span itemprop="name">P3177 [HAOI2015] 树上染色</span>
+          <a class="post-title-link" href="/2022/12/07/P5574-CmdOI2019-%E4%BB%BB%E5%8A%A1%E5%88%86%E9%85%8D%E9%97%AE%E9%A2%98/" itemprop="url">
+            <span itemprop="name">P5574 [CmdOI2019]任务分配问题</span>
           </a>
       </div>
 
@@ -263,15 +326,15 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2022-09-02T19:08:18+08:00"
-              content="2022-09-02">
-          09-02
+              datetime="2022-12-05T19:25:36+08:00"
+              content="2022-12-05">
+          12-05
         </time>
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2022/09/02/SP3734-PERIODNI-Periodni/" itemprop="url">
-            <span itemprop="name">SP3734 PERIODNI - Periodni</span>
+          <a class="post-title-link" href="/2022/12/05/P8867-NOIP2022-%E5%BB%BA%E9%80%A0%E5%86%9B%E8%90%A5/" itemprop="url">
+            <span itemprop="name">P8867 [NOIP2022] 建造军营</span>
           </a>
       </div>
 
@@ -283,15 +346,15 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2022-09-02T09:16:19+08:00"
-              content="2022-09-02">
-          09-02
+              datetime="2022-11-24T19:05:33+08:00"
+              content="2022-11-24">
+          11-24
         </time>
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2022/09/02/LOJ-2743-%E3%80%8CJOI-Open-2016%E3%80%8D%E6%91%A9%E5%A4%A9%E5%A4%A7%E6%A5%BC/" itemprop="url">
-            <span itemprop="name">LOJ#2743. 「JOI Open 2016」摩天大楼</span>
+          <a class="post-title-link" href="/2022/11/24/NOIP%20%E6%B8%B8%E8%AE%B0/" itemprop="url">
+            <span itemprop="name">NOIP 游记</span>
           </a>
       </div>
 
@@ -303,15 +366,15 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2022-09-01T07:38:07+08:00"
-              content="2022-09-01">
-          09-01
+              datetime="2022-11-09T21:27:29+08:00"
+              content="2022-11-09">
+          11-09
         </time>
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2022/09/01/P5999-CEOI2016-kangaroo/" itemprop="url">
-            <span itemprop="name">P5999 [CEOI2016] kangaroo</span>
+          <a class="post-title-link" href="/2022/11/09/LOJ-2115-%E3%80%8CHNOI2015%E3%80%8D%E8%90%BD%E5%BF%86%E6%9E%AB%E9%9F%B3/" itemprop="url">
+            <span itemprop="name">LOJ#2115. 「HNOI2015」落忆枫音</span>
           </a>
       </div>
 
@@ -323,75 +386,15 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2022-08-29T19:46:55+08:00"
-              content="2022-08-29">
-          08-29
+              datetime="2022-10-27T21:18:48+08:00"
+              content="2022-10-27">
+          10-27
         </time>
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2022/08/29/P6186-NOI-Online-1-%E6%8F%90%E9%AB%98%E7%BB%84-%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/" itemprop="url">
-            <span itemprop="name">P6186 [NOI Online #1 提高组] 冒泡排序</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-08-26T14:56:21+08:00"
-              content="2022-08-26">
-          08-26
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/08/26/DP-%E4%B8%93%E9%A1%B9%E8%AE%AD%E7%BB%83/" itemprop="url">
-            <span itemprop="name">DP 专项训练</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-08-25T16:58:13+08:00"
-              content="2022-08-25">
-          08-25
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/08/25/Kruskal-%E9%87%8D%E6%9E%84%E6%A0%91/" itemprop="url">
-            <span itemprop="name">Kruskal 重构树</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-08-23T15:35:12+08:00"
-              content="2022-08-23">
-          08-23
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/08/23/%E5%88%9D%E7%BA%A7%E5%9B%BE%E8%AE%BA/" itemprop="url">
-            <span itemprop="name">初级图论</span>
+          <a class="post-title-link" href="/2022/10/27/CSP-S-%E6%B8%B8%E8%AE%B0/" itemprop="url">
+            <span itemprop="name">CSP-S 游记</span>
           </a>
       </div>
 
@@ -406,7 +409,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/categories/OI/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/categories/OI/">1</a><span class="page-number current">2</span><a class="page-number" href="/categories/OI/page/3/">3</a><a class="extend next" rel="next" href="/categories/OI/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/categories/OI/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/categories/OI/">1</a><span class="page-number current">2</span><a class="page-number" href="/categories/OI/page/3/">3</a><a class="page-number" href="/categories/OI/page/4/">4</a><a class="extend next" rel="next" href="/categories/OI/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -474,7 +477,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-count">45</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -487,7 +490,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-count">45</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -541,12 +544,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">171k</span>
+    <span title="站点总字数">229k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:36</span>
+    <span title="站点阅读时长">3:28</span>
 </div>
 
         

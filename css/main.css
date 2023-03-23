@@ -1190,7 +1190,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #b81ab6;
+  background: #e5ff81;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2697,4 +2697,12 @@ body {
   background-position: 50% 50%;
   background-size: cover;
   opacity: 0.8;
+}
+.fa-code {
+  background: url("/images/code-solid.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 75%;
+  height: 1rem;
+  width: 1rem;
+  opacity: 0.75;
 }

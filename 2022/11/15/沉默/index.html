@@ -19,7 +19,7 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
-
+  <style type="text/css">details.note,details.success,details.failure,details.warning,details.info,details.question,details.example,details.quote,details.code{display:block!important;padding-top:0!important;box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2)!important;position:relative!important;margin:1.5625em 0!important;padding:0 1em!important;border-left:.2em solid!important;border-radius:.1em!important;font-size:.9em!important;overflow:auto!important;}details.note:not([open]),details.success:not([open]),details.failure:not([open]),details.warning:not([open]),details.info:not([open]),details.question:not([open]),details.example:not([open]),details.quote:not([open]),details.code:not([open]){padding-bottom:0!important;}details.note{border-left-color:#448aff!important;}details.success{border-left-color:#00c853!important;}details.failure{border-left-color:#ff5252!important;}details.warning{border-left-color:#ff9100!important;}details.info{border-left-color:#00b8d4!important;}details.question{border-left-color:#64dd17!important;}details.example{border-left-color:#651fff!important;}details.quote{border-left-color:#9e9e9e!important;}details.code{border-left-color:#a0a0a0!important;}details.note>summary,details.success>summary,details.failure>summary,details.warning>summary,details.info>summary,details.question>summary,details.example>summary,details.quote>summary,details.code>summary{margin:0 -1em 1em -1em;padding:.4em .6em .4em .6em;border-bottom:.05em solid;font-weight:700;display:block;outline:none;cursor:pointer;}details.note>summary{border-bottom-color:rgba(68,138,255,.1);background-color:rgba(68,138,255,.1);}details.success>summary{border-bottom-color:rgba(0,200,83,.1);background-color:rgba(0,200,83,.1);}details.failure>summary{border-bottom-color:rgba(255,82,82,.1);background-color:rgba(255,82,82,.1);}details.warning>summary{border-bottom-color:rgba(255,145,0,.1);background-color:rgba(255,145,0,.1);}details.info>summary{border-bottom-color:rgba(0,184,212,.1);background-color:rgba(0,184,212,.1);}details.question>summary{border-bottom-color:rgba(100,221,23,.1);background-color:rgba(100,221,23,.1);}details.example>summary{border-bottom-color:rgba(101,31,255,.1);background-color:rgba(101,31,255,.1);}details.quote>summary{border-bottom-color:rgba(158,158,158,.1);background-color:rgba(158,158,158,.1);}details.code>summary{border-bottom-color:rgba(160,160,160,.1);background-color:rgba(160,160,160,.1);}details.note:not([open])>summary,details.success:not([open])>summary,details.failure:not([open])>summary,details.warning:not([open])>summary,details.info:not([open])>summary,details.question:not([open])>summary,details.example:not([open])>summary,details.quote:not([open])>summary,details.code:not([open])>summary{border-bottom:0;margin-bottom:0;}details.note>summary>div.box-open-button,details.success>summary>div.box-open-button,details.failure>summary>div.box-open-button,details.warning>summary>div.box-open-button,details.info>summary>div.box-open-button,details.question>summary>div.box-open-button,details.example>summary>div.box-open-button,details.quote>summary>div.box-open-button,details.code>summary>div.box-open-button{float:right;}details.note>summary>i,details.success>summary>i,details.failure>summary>i,details.warning>summary>i,details.info>summary>i,details.question>summary>i,details.example>summary>i,details.quote>summary>i,details.code>summary>i,details.note>summary>div.box-open-button>i,details.success>summary>div.box-open-button>i,details.failure>summary>div.box-open-button>i,details.warning>summary>div.box-open-button>i,details.info>summary>div.box-open-button>i,details.question>summary>div.box-open-button>i,details.example>summary>div.box-open-button>i,details.quote>summary>div.box-open-button>i,details.code>summary>div.box-open-button>i{margin:0 .6125em 0 .6125em;}details.note>summary>i{color:#448aff;}details.success>summary>i{color:#00c853;}details.failure>summary>i{color:#ff5252;}details.warning>summary>i{color:#ff9100;}details.info>summary>i{color:#00b8d4;}details.question>summary>i{color:#64dd17;}details.example>summary>i{color:#651fff;}details.quote>summary>i{color:#9e9e9e;}details.code>summary>i{color:#a0a0a0;}details.note>summary>div.box-open-button>i,details.success>summary>div.box-open-button>i,details.failure>summary>div.box-open-button>i,details.warning>summary>div.box-open-button>i,details.info>summary>div.box-open-button>i,details.question>summary>div.box-open-button>i,details.example>summary>div.box-open-button>i,details.quote>summary>div.box-open-button>i,details.code>summary>div.box-open-button>i{color:rgba(0,0,0,.26);}details[open].note>summary>div.box-open-button>i,details[open].success>summary>div.box-open-button>i,details[open].failure>summary>div.box-open-button>i,details[open].warning>summary>div.box-open-button>i,details[open].info>summary>div.box-open-button>i,details[open].question>summary>div.box-open-button>i,details[open].example>summary>div.box-open-button>i,details[open].quote>summary>div.box-open-button>i,details[open].code>summary>div.box-open-button>i{transform:rotate(180deg);}</style>
   <meta name="description" content="……">
 <meta property="og:type" content="article">
 <meta property="og:title" content=" ">
@@ -28,7 +28,7 @@
 <meta property="og:description" content="……">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-11-15T11:46:03.000Z">
-<meta property="article:modified_time" content="2022-12-07T01:19:26.477Z">
+<meta property="article:modified_time" content="2023-03-17T09:22:30.849Z">
 <meta property="article:author" content="Live">
 <meta property="article:tag" content="闲话">
 <meta name="twitter:card" content="summary">
@@ -221,7 +221,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-07 09:19:26" itemprop="dateModified" datetime="2022-12-07T09:19:26+08:00">2022-12-07</time>
+                <time title="修改时间：2023-03-17 17:22:30" itemprop="dateModified" datetime="2023-03-17T17:22:30+08:00">2023-03-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -239,7 +239,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>774</span>
+              <span>898</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -260,12 +260,14 @@
       
         <p> ……</p>
 <span id="more"></span>
-
 <p>总有人选择沉默，似乎对于任何事都是这样，无论好的坏的。有人认为他们故作深沉，但他们的姿态不是事不关己，也不是高高在上——而是像树木一般，无言中挺立着。</p>
 <p>沉默也许来源于内心的孤独。沉默是因为所流露的感情却也无人在意。既然无人倾听，那就没什么必要用话讲出来了。一个人的路上深一脚浅一脚地走，也只能感觉到自己的情感在泛滥，只好拼尽全力去保护玻璃般的心。随之语言功能也就逐渐退化，独自读一些写一些半懂不通的文字，仿佛徜徉于自己内心的世界的朦胧感，无法自拔。最后只是如此日复一日，江河日下罢了。这就是从前的感觉，像是得了病，是失去了能量的车轮，没有了向上的动力。</p>
-<p>但也随着经历的是非越来越多——我想也多半是因为人总是要成长的。人们说：“沉默是成年人的默契。”从前的我们也很喜欢较真，一定要争个胜负，也不知道是为了得到什么——或许就是所谓的<em>优越感</em>，却也害怕着被揭穿，好保住自己可怜的自尊心<em>优越感</em>。不过谁谁谁做的什么什么事情，其实都心知肚明，只是也不愿多言。这种或是理解，或是不愿与其同流合污但也却无力改变，只暗下决心——像埋下了一颗种子，还有一种则是纵容与包庇，这种更是废物了，并不归于这一类。沉默中也像这样观察着周围的一切。如此，在沉默中自身也逐渐变化着，褪去青涩就剩下粗糙的枝干，也不知道是应该高兴还是难过。只剩下沉默。</p>
-<p>开始将目光移向自身，生活中的事物也沉淀下来。沉默中能够摒弃一些浮躁与戾气，逐渐深入自己，感觉到自我生命的本真，并明白自己想要成为什么，不想要成为什么。一切只是关乎你对自己生命价值的满足与充实的快乐。生命的意义是个永远求不出解的问题，但你能够知道这个问题有解，也会告诉自己继续要不停走下去。自己也在朦胧的内心世界开始清晰起来，也就不会再为了过去而后悔，为了未来而彷徨。</p>
+<p>但也随着经历的是非越来越多——我想也多半是因为人总是要成长的。人们说：“沉默是成年人的默契。”此话只对了一半。从前的我们也很喜欢较真，一定要争个胜负，也不知道是为了得到什么——或许就是所谓的 <em>优越感</em>，却也害怕着被揭穿，好保住自己可怜的自尊心与<em>优越感</em>。不过谁谁谁做的什么什么事情，其实都心知肚明，只是也不愿多言。这种或是理解，或是不愿与其同流合污但也却无力改变，只暗下决心——像埋下了一颗种子，要用自己的方式完成自己的使命。更多的是少说话而多做事。自然还有一种则是纵容与包庇，这就直接成了令人厌恶的冷眼旁观者，于是这种更是废物了，并不归于这一类。沉默之中，也像这样观察着周围的一切。如此，在沉默中自身也逐渐变化着，褪去青涩就剩下粗糙的枝干，也不知道是应该高兴还是难过。只剩下沉默，直到应当的时机，再爆出口。</p>
+<p>开始将目光移向自身，生活中的事物也沉淀下来。沉默中能够摒弃一些浮躁与戾气，逐渐深入自己，感觉到自我生命的本真，并明白自己想要成为什么，不想要成为什么。一切只是关乎你对自己生命价值的满足与充实的快乐。才能够宁静而致远。生命的意义是个永远求不出解的问题，但你能够知道这个问题有解，也会告诉自己继续要不停走下去。自己也在朦胧的内心世界开始清晰起来，也就不会再为了过去而后悔，为了未来而彷徨。</p>
 <p>于是只是像树木一般，无言中挺立着。在冷气之中，只是感觉到充实与自由。</p>
+<blockquote>
+<p>人一旦悟透了就会变得沉默，不是没有与人相处的能力，而是没有了逢人作戏的兴趣。——鲁迅</p>
+</blockquote>
 
     </div>
 
@@ -365,7 +367,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-count">45</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -378,7 +380,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">36</span>
+        <span class="site-state-item-count">45</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -432,12 +434,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">171k</span>
+    <span title="站点总字数">229k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:36</span>
+    <span title="站点阅读时长">3:28</span>
 </div>
 
         
