@@ -263,7 +263,7 @@
         <p>快速莫比乌斯变换 FMT 与 快速沃尔什变换 FWT。</p>
 <span id="more"></span>
 <h3 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h3><p>一个长度为 $2^n$ 的序列 $f(i)$，有一个生成函数 $F(x)=\sum_{i=0}^{2^n-1}f(i) x^i$，那么，这个生成函数叫做集合幂级数。</p>
-<p>这和集合有什么关系呢？将集合 $\{0,1,\cdots,n-1 \}$ 的一个子集状态压缩后就对应着原序列的一个下标 $i$。</p>
+<p>这和集合有什么关系呢？将集合 ${0,1,\cdots,n-1 }$ 的一个子集状态压缩后就对应着原序列的一个下标 $i$。</p>
 <p>其卷积形式大多为 $c(i)=\sum_{j\oplus k=i}a(j)*b(k)$，这里的 $\oplus$ 指代某种运算，其大多是位运算。</p>
 <p>直接暴力求卷积是 $\mathcal O(4^n)$ 的，考虑更优的做法。</p>
 <h3 id="2-快速莫比乌斯变换-FMT"><a href="#2-快速莫比乌斯变换-FMT" class="headerlink" title="2.快速莫比乌斯变换 FMT"></a>2.快速莫比乌斯变换 FMT</h3><p>用来求高维前缀和。高维前缀和就是对 $n$ 维数组求前缀和，不过每一维只有 $0,1$ 两个下标。本质上就是子集和 $b(i)=\sum_{j|i=i} a(j)$。暴力枚举子集来求的时间复杂度是 $\mathcal O(3^n)$ 的。</p>
@@ -429,7 +429,7 @@ FMT(C_{|x|})=\sum_{|i|}(FMT(A_{|i|})*FMT(B_{|x|-|i|}))
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">73</span>
+          <span class="site-state-item-count">133</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -442,7 +442,7 @@ FMT(C_{|x|})=\sum_{|i|}(FMT(A_{|i|})*FMT(B_{|x|-|i|}))
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-count">80</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -496,12 +496,12 @@ FMT(C_{|x|})=\sum_{|i|}(FMT(A_{|i|})*FMT(B_{|x|-|i|}))
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">300k</span>
+    <span title="站点总字数">451k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:33</span>
+    <span title="站点阅读时长">6:50</span>
 </div>
 
         

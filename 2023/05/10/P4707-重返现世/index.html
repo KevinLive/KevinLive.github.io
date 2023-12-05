@@ -28,11 +28,11 @@
 <meta property="og:description" content="巧妙的 DP 题目。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-05-10T03:25:56.000Z">
-<meta property="article:modified_time" content="2023-05-10T14:17:29.005Z">
+<meta property="article:modified_time" content="2023-07-10T01:41:51.360Z">
 <meta property="article:author" content="Live">
 <meta property="article:tag" content="题解">
-<meta property="article:tag" content="min-max 容斥">
 <meta property="article:tag" content="DP">
+<meta property="article:tag" content="min-max 容斥">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://example.com/2023/05/10/P4707-%E9%87%8D%E8%BF%94%E7%8E%B0%E4%B8%96/">
@@ -215,10 +215,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-05-10 11:25:56 / 修改时间：22:17:29" itemprop="dateCreated datePublished" datetime="2023-05-10T11:25:56+08:00">2023-05-10</time>
+              <time title="创建时间：2023-05-10 11:25:56" itemprop="dateCreated datePublished" datetime="2023-05-10T11:25:56+08:00">2023-05-10</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-07-10 09:41:51" itemprop="dateModified" datetime="2023-07-10T09:41:51+08:00">2023-07-10</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -259,7 +265,7 @@
 <p>设 $k’=n-k-1$ ，并接下来都是用 $k’$ 。设每种材料被收集的时间为 $t_i$，相当于求 $\displaystyle E(\text{kth}\max_{i=1}^n t_i)$。max 显然不好直接求，考虑 min-max 容斥得到：</p>
 <script type="math/tex; mode=display">
 E(\text{kth}\max_{ i\in S}t_i)=\sum_{T\subseteq S}(-1)^{|T|-k}\binom{|T|-1}{k-1}E(\min_{i\in T} t_i)</script><p>其中 $\displaystyle E(\min_{i\in S} t_i)= \frac{m}{\sum_{i\in S} p_i}$。考虑一个暴力 DP，设状态 $f(i,j)$ 表示选择 $i$ 种材料，$\sum_{i\in S} p_i=j$ 的方案数。因为需要每次枚举所有材料。这样的时间复杂度 $\mathcal O(n^2m)$，不能通过。</p>
-<p>注意到 $k$ 是很小的。考虑 $k$ 压进去。于是我们直接求容斥系数 $\displaystyle \sum_{\sum_{i\in S} p_i=j}(-1)^{|T|-k}\binom{|T|-1}{k-1}$。因为需要计算 $\frac{m}{f(S)}$ 的贡献，$\sum_{i\in S} p_i$ 还是需要压进状态里，于是考虑设计状态 $f(i,j,k)$ 表示考虑前 $i$ 个数，$\sum_{i\in S} p_i=j$，关于 $k$ 的容斥系数。但是处理组合数似乎令人头疼，尝试用 $\binom{n}{m}=\binom{n-1}{m}+\binom{n-1}{m-1}$，拆一下 $|T|,k$ 的容斥系数，得到：</p>
+<p>注意到 $k$ 是很小的。考虑 $k$ 压进去。于是我们直接求容斥系数 $\displaystyle \sum_{\sum_{i\in S} p_i=j}(-1)^{|T|-k}\binom{|T|-1}{k-1}$。因为需要计算 $\frac{m}{f(S)}$ 的贡献，$\sum_{i\in S} p_i$ 还是需要压进状态里，于是考虑设计状态 $f(i,j,k)$ 表示考虑前 $i$ 个数，$\sum_{i\in S} p_i=j$，关于 $k$ 的容斥系数。但是处理组合数似乎令人头疼，尝试利用 $\binom{n}{m}=\binom{n-1}{m}+\binom{n-1}{m-1}$，拆一下 $|T|,k$ 的容斥系数，得到：</p>
 <script type="math/tex; mode=display">
 \begin{align}
 &(-1)^{|T|-k}\binom{|T|-1}{k-1}\\
@@ -284,8 +290,8 @@ f(i,j,k)=f(i-1,j,k)-f(i-1,j-p_i,k)+f(i-1,j-p_i,k-1)</script><p>需要注意的�
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag"># 题解</a>
-              <a href="/tags/min-max-%E5%AE%B9%E6%96%A5/" rel="tag"># min-max 容斥</a>
               <a href="/tags/DP/" rel="tag"># DP</a>
+              <a href="/tags/min-max-%E5%AE%B9%E6%96%A5/" rel="tag"># min-max 容斥</a>
           </div>
 
         
@@ -375,7 +381,7 @@ f(i,j,k)=f(i-1,j,k)-f(i-1,j-p_i,k)+f(i-1,j-p_i,k-1)</script><p>需要注意的�
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">73</span>
+          <span class="site-state-item-count">133</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -388,7 +394,7 @@ f(i,j,k)=f(i-1,j,k)-f(i-1,j-p_i,k)+f(i-1,j-p_i,k-1)</script><p>需要注意的�
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-count">80</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -442,12 +448,12 @@ f(i,j,k)=f(i-1,j,k)-f(i-1,j-p_i,k)+f(i-1,j-p_i,k-1)</script><p>需要注意的�
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">300k</span>
+    <span title="站点总字数">451k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:33</span>
+    <span title="站点阅读时长">6:50</span>
 </div>
 
         

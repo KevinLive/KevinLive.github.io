@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+  <style type="text/css">details.note,details.success,details.failure,details.warning,details.info,details.question,details.example,details.quote,details.code{display:block!important;padding-top:0!important;box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2)!important;position:relative!important;margin:1.5625em 0!important;padding:0 1em!important;border-left:.2em solid!important;border-radius:.1em!important;font-size:.9em!important;overflow:auto!important;}details.note:not([open]),details.success:not([open]),details.failure:not([open]),details.warning:not([open]),details.info:not([open]),details.question:not([open]),details.example:not([open]),details.quote:not([open]),details.code:not([open]){padding-bottom:0!important;}details.note{border-left-color:#448aff!important;}details.success{border-left-color:#00c853!important;}details.failure{border-left-color:#ff5252!important;}details.warning{border-left-color:#ff9100!important;}details.info{border-left-color:#00b8d4!important;}details.question{border-left-color:#64dd17!important;}details.example{border-left-color:#651fff!important;}details.quote{border-left-color:#9e9e9e!important;}details.code{border-left-color:#a0a0a0!important;}details.note>summary,details.success>summary,details.failure>summary,details.warning>summary,details.info>summary,details.question>summary,details.example>summary,details.quote>summary,details.code>summary{margin:0 -1em 1em -1em;padding:.4em .6em .4em .6em;border-bottom:.05em solid;font-weight:700;display:block;outline:none;cursor:pointer;}details.note>summary{border-bottom-color:rgba(68,138,255,.1);background-color:rgba(68,138,255,.1);}details.success>summary{border-bottom-color:rgba(0,200,83,.1);background-color:rgba(0,200,83,.1);}details.failure>summary{border-bottom-color:rgba(255,82,82,.1);background-color:rgba(255,82,82,.1);}details.warning>summary{border-bottom-color:rgba(255,145,0,.1);background-color:rgba(255,145,0,.1);}details.info>summary{border-bottom-color:rgba(0,184,212,.1);background-color:rgba(0,184,212,.1);}details.question>summary{border-bottom-color:rgba(100,221,23,.1);background-color:rgba(100,221,23,.1);}details.example>summary{border-bottom-color:rgba(101,31,255,.1);background-color:rgba(101,31,255,.1);}details.quote>summary{border-bottom-color:rgba(158,158,158,.1);background-color:rgba(158,158,158,.1);}details.code>summary{border-bottom-color:rgba(160,160,160,.1);background-color:rgba(160,160,160,.1);}details.note:not([open])>summary,details.success:not([open])>summary,details.failure:not([open])>summary,details.warning:not([open])>summary,details.info:not([open])>summary,details.question:not([open])>summary,details.example:not([open])>summary,details.quote:not([open])>summary,details.code:not([open])>summary{border-bottom:0;margin-bottom:0;}details.note>summary>div.box-open-button,details.success>summary>div.box-open-button,details.failure>summary>div.box-open-button,details.warning>summary>div.box-open-button,details.info>summary>div.box-open-button,details.question>summary>div.box-open-button,details.example>summary>div.box-open-button,details.quote>summary>div.box-open-button,details.code>summary>div.box-open-button{float:right;}details.note>summary>i,details.success>summary>i,details.failure>summary>i,details.warning>summary>i,details.info>summary>i,details.question>summary>i,details.example>summary>i,details.quote>summary>i,details.code>summary>i,details.note>summary>div.box-open-button>i,details.success>summary>div.box-open-button>i,details.failure>summary>div.box-open-button>i,details.warning>summary>div.box-open-button>i,details.info>summary>div.box-open-button>i,details.question>summary>div.box-open-button>i,details.example>summary>div.box-open-button>i,details.quote>summary>div.box-open-button>i,details.code>summary>div.box-open-button>i{margin:0 .6125em 0 .6125em;}details.note>summary>i{color:#448aff;}details.success>summary>i{color:#00c853;}details.failure>summary>i{color:#ff5252;}details.warning>summary>i{color:#ff9100;}details.info>summary>i{color:#00b8d4;}details.question>summary>i{color:#64dd17;}details.example>summary>i{color:#651fff;}details.quote>summary>i{color:#9e9e9e;}details.code>summary>i{color:#a0a0a0;}details.note>summary>div.box-open-button>i,details.success>summary>div.box-open-button>i,details.failure>summary>div.box-open-button>i,details.warning>summary>div.box-open-button>i,details.info>summary>div.box-open-button>i,details.question>summary>div.box-open-button>i,details.example>summary>div.box-open-button>i,details.quote>summary>div.box-open-button>i,details.code>summary>div.box-open-button>i{color:rgba(0,0,0,.26);}details[open].note>summary>div.box-open-button>i,details[open].success>summary>div.box-open-button>i,details[open].failure>summary>div.box-open-button>i,details[open].warning>summary>div.box-open-button>i,details[open].info>summary>div.box-open-button>i,details[open].question>summary>div.box-open-button>i,details[open].example>summary>div.box-open-button>i,details[open].quote>summary>div.box-open-button>i,details[open].code>summary>div.box-open-button>i{transform:rotate(180deg);}</style>
+  <meta name="description" content="太菜导致的结果。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NOIP2023 游记">
+<meta property="og:url" content="http://example.com/2023/11/30/NOIP2023%E6%B8%B8%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Live&#39;s Blog">
+<meta property="og:description" content="太菜导致的结果。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-11-30T07:45:12.000Z">
+<meta property="article:modified_time" content="2023-11-30T12:52:26.678Z">
+<meta property="article:author" content="Live">
+<meta property="article:tag" content="游记">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2023/11/30/NOIP2023%E6%B8%B8%E8%AE%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>NOIP2023 游记 | Live's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Live's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">I am.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-friends">
+
+    <a href="/friends/" rel="section"><i class="fas fa-link fa-fw"></i>友链</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/30/NOIP2023%E6%B8%B8%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Live">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Live's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          NOIP2023 游记
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-11-30 15:45:12 / 修改时间：20:52:26" itemprop="dateCreated datePublished" datetime="2023-11-30T15:45:12+08:00">2023-11-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>太菜导致的结果。</p>
+<span id="more"></span>
+<h2 id="Day-2"><a href="#Day-2" class="headerlink" title="Day -2"></a>Day -2</h2><p>下午的模拟赛，T1不会，被低一级同学薄纱了，并且部分分力也没打满。赛后看题解发现 T1 反而有点意思，看来不会做雀食是水平问题了。然后晚上去吃了 卤肉饭+KFC（yzx 请客 /bx）。中途交流了今天题目的做法。回机房忘记干了些啥了。回寝室睡觉比较早。</p>
+<h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day -1"></a>Day -1</h2><p>比较快乐的一天。</p>
+<p>上午先打了会板子，但是这次都没用到。然后就是传统的 NOIP前 机房 generals 大赛，感觉高一的同学并不十分擅长，所以我赢的比较多，但是还是很快乐。剩下的时间都在耍。</p>
+<p>中午一点的时候出发了，在车上听了一会歌，然后就是耍手机了。三点半左右到了，找到酒店之后，发现我TM手机放车上了，又只好麻烦师傅送一下。本来以为下午就留在酒店休息了，但是刘老师说去球馆打羽毛球，<del>并且报销</del>。于是打了一下午球，打得太爽了！！！没想到刘老师竟然要打羽毛球，而且打得很不错。打完感觉很累，甚至脚都磨破皮了。回到酒店吃了饭还有烧烤。然后下去买了红牛和白巧克力（据说有buff加成）。回酒店之后一起看了会电视。然后就开始了重点：我们开始交流考试策略，大概就是：<strong>T1做完之后，先尽可能多拿分，先不要一直想着过某个题，追求总分最大化</strong>。也算是为之后埋下伏笔了。</p>
+<p>然后回房间，我跟 Eternity 一个房间，再看了会板子到十点。然后洗漱玩完准备睡觉。十点半躺床上，但是想了挺多的。之前也想过很多，大不了回去学文化课！有些话想说但还是算了。十一点左右就睡了，睡得比较不错。</p>
+<h2 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h2><p>早上六点生物钟就醒了，躺在床上睡不着了。六点五十去下面吃了早饭，比较饱。然后就去七中门口等了一会进去了，中间遇到了初中同学 sgc 还有 zyc，感觉雀食很久没见了，可惜没有和 zyc 打招呼。我草，七中教学楼装修怎么这么好啊。而且早就听说过机房里机子是高贵的 i7-13700K，牛逼。考前先去上了个厕所。然后进了考场试了试机子，怎么坐这么近，而且没有挡板啊。影响不大。但是很烦的一点是，放键盘的槽子里确实如 sgc 所说很阴间，用起来比较不爽，并且我那个位置线比较短，拉不上来。但还是在可以接受的范围内。</p>
+<p>然后就开题了，T1先读了两遍题，<del>发现自己不会</del>，感觉可能是自己太紧张了，于是浏览了一遍后面的题：T2 图论？T3构造？T4数学或者DP？之后重新看T1，心态稳一点了。发现自己题看错了，然后开始写，简单手写了个 <code>string</code>，但是发现死活过不了第三个大样例。于是又重新读题，发现直接把 “<strong>任意多次</strong>“ 看漏了，淦。所幸和原来差不多。写完大概是九点过一会。</p>
+<p>于是看T2，知道是图论，但是不知道怎么建图。当时不知道为啥在分层图卡了一下，感觉并不好做。于是回想起 NOIP2022 的惨痛教训，于是我直接选择<strong>先放弃 T2，去看 T3 T4</strong>。感觉 T3 有点意思但比较可做。<strong>“为啥感觉T4很简单啊？”</strong> ，内心os。</p>
+<p>于是决定先做 T3，感觉问题转化后形式很简单，很可做，先编了 $\mathcal O(qn^2)$ 的朴素 DP 做法。然后立马跳到 T4，把 T4 的 $\mathcal O(n^2)$ DP写完。此时不知道是多久，但是我看到 T3 的特殊性质，感觉分好多啊，猜到与正解做法类似，但是继续想了一会，就会了一个线性的双指针做法，70pts 到手了。其实当时感觉自己已经会了这题了，但是还有应多细节没想出来，于是放弃马上继续做 T4。这个时候心态非常不错，觉得自己应该挺稳的。    维护了，再加上 性质 B 有 64 pts。当时觉得这分已经不错了，就没多想，直接开始搓线段树了。有那么一瞬间，我真的在想：“加个离散化行不？”，但是马上否定了：“NOIP T4 哪有真这么简单啊。”于是陆陆续续写加调了好一会。做完上述事情已经十二点了，红牛已经干完了，白巧就吃了两小块。这个时候觉得自己节奏非常不错，<strong>比较稳了</strong>。觉得 T2 跟去年一样应该比较困难，于是选择搓暴力，再写点部分分得了。最后结束的时候还在调部分分，但意识到会这档分已经能把这题切了。最后离场。</p>
+<p>考完就遇到 Eternity，交流了一下子。这个时候已经略感不妙了。出来之后不想吃饭，于是回酒店收拾东西并且和其他同学交流了一下，<del>但是没人过题</del>。准备回绵阳。到的时候已经四点过了。回家之后马上去测了一下，云斗上是 100+20+75+56=251，T2 第二档部分分挂了，T4性质B 也挂了，但问题不大，还可以接受。然后就和 using 玩 CS2，我问他考得怎么样，他说不出意外应该 AK 了。此时感觉大寄。然后跟 Fly 交流了下，他说：“T2不 sb 题吗？”，不会就我不会 T2 吧？但似乎真是这样。但是管不了了，先玩 CS2。</p>
+<h2 id="Day-1-1"><a href="#Day-1-1" class="headerlink" title="Day 1"></a>Day 1</h2><p>回学校了， 放东西的时候教练找我谈话了。告诉我的分数很尴尬，完全不能说好，总结了一下就是：T2 20pts有点太少了。我也有点郁闷，但是确实没办法啊：考场上确实没看出来 T2 很sb啊。关键 T2 还挂了 20pts。真的很难受，但是水平确实有问题啊——我如果有 Fly 的水平的话，早就 AK 了吧。害。</p>
+<h2 id="Day-2-11"><a href="#Day-2-11" class="headerlink" title="Day 2 - 11"></a>Day 2 - 11</h2><p>补 whk。</p>
+<h2 id="Day-12"><a href="#Day-12" class="headerlink" title="Day 12"></a>Day 12</h2><p>水平还是太次了。问了很多人，包括但不限于两位学长。但是无一例外都劝我学下去。我也想啊，但是翻盘真的有些困难，我只能到达 Fly 水平才能翻盘吧。而且 SC 单独命题，往年一直都很阴间，感觉很多学长莫名其妙就被送退役了。只希望出题人能够负点责任，有点同情心吧。其它只能尽人事了。</p>
+<p>也算是新的开始吧，Liveddd。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%B8%B8%E8%AE%B0/" rel="tag"># 游记</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/11/14/CF1137E-Train-Car-Selection/" rel="prev" title="CF1137E Train Car Selection">
+      <i class="fa fa-chevron-left"></i> CF1137E Train Car Selection
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/11/30/AGC010E-Rearranging/" rel="next" title="[AGC010E] Rearranging">
+      [AGC010E] Rearranging <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-2"><span class="nav-text">Day -2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-1"><span class="nav-text">Day -1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-0"><span class="nav-text">Day 0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-1-1"><span class="nav-text">Day 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-2-11"><span class="nav-text">Day 2 - 11</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-12"><span class="nav-text">Day 12</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Live"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Live</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">133</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">80</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/kevinlive" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;kevinlive" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2098412209@qq.com" title="E-Mail → mailto:2098412209@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=2098412209&site=qq&menu=yes" title="QQ → http:&#x2F;&#x2F;wpa.qq.com&#x2F;msgrd?v&#x3D;3&amp;uin&#x3D;2098412209&amp;site&#x3D;qq&amp;menu&#x3D;yes" rel="noopener" target="_blank"><i class="fab fa-qq fa-fw"></i>QQ</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.luogu.com.cn/user/109659" title="Luogu → https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;user&#x2F;109659" rel="noopener" target="_blank"><i class=" fa-fw"></i>Luogu</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Live</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">451k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:50</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '105fcec5366e0f679318',
+      clientSecret: 'ce01d85deec32a8ec976a1b9dc4c93e4bd168190',
+      repo        : 'GitalkStorage',
+      owner       : 'KevinLive',
+      admin       : ['KevinLive'],
+      id          : '9ffe14544219cc40dbb1ebebfe1e5f63',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>

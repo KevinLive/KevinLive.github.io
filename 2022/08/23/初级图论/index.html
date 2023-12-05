@@ -29,10 +29,14 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2022/08/23/%E5%88%9D%E7%BA%A7%E5%9B%BE%E8%AE%BA/image1.png">
 <meta property="article:published_time" content="2022-08-23T07:35:12.000Z">
-<meta property="article:modified_time" content="2023-04-20T08:47:42.261Z">
+<meta property="article:modified_time" content="2023-06-28T03:25:12.749Z">
 <meta property="article:author" content="Live">
 <meta property="article:tag" content="图论">
 <meta property="article:tag" content="笔记">
+<meta property="article:tag" content="生成树">
+<meta property="article:tag" content="最短路">
+<meta property="article:tag" content="差分约束">
+<meta property="article:tag" content="圆方树">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2022/08/23/%E5%88%9D%E7%BA%A7%E5%9B%BE%E8%AE%BA/image1.png">
 
@@ -224,7 +228,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-04-20 16:47:42" itemprop="dateModified" datetime="2023-04-20T16:47:42+08:00">2023-04-20</time>
+                <time title="修改时间：2023-06-28 11:25:12" itemprop="dateModified" datetime="2023-06-28T11:25:12+08:00">2023-06-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -339,7 +343,7 @@
 <p>注意这里给定了初值，我们从 $0$ 向  $i$ 分别连 $\log x$ 和 $-\log x$ 的边就可以了，相等形式的边都可以这样连（转化为 $x_i\ge x_j$ 且 $x_j\ge x_i$ 即可）。</p>
 <h4 id="3-AGC056C-01-Balanced"><a href="#3-AGC056C-01-Balanced" class="headerlink" title="3.[AGC056C] 01 Balanced"></a>3.<a target="_blank" rel="noopener" href="https://atcoder.jp/contests/agc056/tasks/agc056_c">[AGC056C] 01 Balanced</a></h4><p>形式就很差分约束，可以直接对前缀和数组进行差分约束，但是这样的复杂度是 $\mathcal O(nm)$，无法通过。</p>
 <p>我们发现最令人头疼的是对于 $[l,r]$ 这样的限制，因为我们必须建权值为 $(r-l+1)/2$ 的边。这样我们只能够暴力跑 SPFA。</p>
-<p>但是我们可以将 $0$ 看为 $1$，而将 $1$ 看为 $-1$。这样我们对于 $[l,r]$ 这样的限制，只需要建长度为 $0$ 的边即可。相邻点的限制变成了 $|v_i-v_{i-1}|\le 1$。所有边权只剩下 $0,1$，我们可以直接用 01 BFS 跑最短路。因为差分约束求出来的解有字典序为最大解，所以求出来就是原问题最小字典序的解。</p>
+<p>但是我们可以将 $0$ 看为 $1$，而将 $1$ 看为 $-1$。这样我们对于 $[l,r]$ 这样的限制，只需要建长度为 $0$ 的边即可。相邻点的限制变成了 $|v_i-v_{i-1}|\le 1$。所有边权只剩下 $0,1$，我们可以直接用 01 BFS 跑最短路。因为差分约束求出来的解为字典序最大解，所以求出来就是原问题最小字典序的解。</p>
 <details class="success"><summary><i class="fa fa-check fa-fw"></i>Code<div class="box-open-button"><i class="fa fa-chevron-down fa-fw"></i></div></summary>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;deque&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">1e6</span>+<span class="number">10</span>,M=<span class="number">3e6</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">read</span><span class="params">(T &amp;x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    x=<span class="number">0</span>;<span class="type">bool</span> f=<span class="number">0</span>;</span><br><span class="line">    <span class="type">char</span> ch=<span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">while</span>(ch&lt;<span class="string">&#x27;0&#x27;</span>||ch&gt;<span class="string">&#x27;9&#x27;</span>)&#123;<span class="keyword">if</span>(ch==<span class="string">&#x27;-&#x27;</span>)f=<span class="number">1</span>;ch=<span class="built_in">getchar</span>();&#125;</span><br><span class="line">    <span class="keyword">while</span>(ch&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;ch&lt;=<span class="string">&#x27;9&#x27;</span>)x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(ch^<span class="number">48</span>),ch=<span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">if</span>(f)x=-x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>,<span class="keyword">class</span> ...T1&gt;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">read</span><span class="params">(T &amp;x,T1 &amp;...x1)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">read</span>(x),<span class="built_in">read</span>(x1...);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> n,m;</span><br><span class="line"><span class="type">int</span> tot,head[N],ver[M],e[M],ne[M];</span><br><span class="line"><span class="type">int</span> dis[N];</span><br><span class="line">deque&lt;<span class="type">int</span>&gt;q;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> u,<span class="type">int</span> v,<span class="type">int</span> w)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ver[++tot]=v;</span><br><span class="line">    e[tot]=w;</span><br><span class="line">    ne[tot]=head[u];</span><br><span class="line">    head[u]=tot;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">BFS</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(dis,<span class="number">0x3f</span>,<span class="built_in">sizeof</span>(dis));</span><br><span class="line">    dis[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">    q.<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">while</span>(!q.<span class="built_in">empty</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> x=q.<span class="built_in">front</span>();</span><br><span class="line">        q.<span class="built_in">pop_front</span>();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=head[x];i;i=ne[i])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> y=ver[i],d=dis[x]+e[i];</span><br><span class="line">            <span class="keyword">if</span>(dis[y]&gt;d)</span><br><span class="line">            &#123;</span><br><span class="line">                dis[y]=d;</span><br><span class="line">                <span class="keyword">if</span>(!e[i])q.<span class="built_in">push_front</span>(y);</span><br><span class="line">                <span class="keyword">else</span> q.<span class="built_in">push_back</span>(y);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">read</span>(n,m);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        <span class="built_in">add</span>(i,i<span class="number">-1</span>,<span class="number">1</span>),<span class="built_in">add</span>(i<span class="number">-1</span>,i,<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">while</span>(m--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> l,r;</span><br><span class="line">        <span class="built_in">read</span>(l,r);</span><br><span class="line">        <span class="built_in">add</span>(r,l<span class="number">-1</span>,<span class="number">0</span>),<span class="built_in">add</span>(l<span class="number">-1</span>,r,<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">BFS</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,dis[i<span class="number">-1</span>]&gt;dis[i]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -430,6 +434,10 @@ dfn_x=low_x</script><p>此处先不做过多阐述。</p>
           <div class="post-tags">
               <a href="/tags/%E5%9B%BE%E8%AE%BA/" rel="tag"># 图论</a>
               <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
+              <a href="/tags/%E7%94%9F%E6%88%90%E6%A0%91/" rel="tag"># 生成树</a>
+              <a href="/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/" rel="tag"># 最短路</a>
+              <a href="/tags/%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F/" rel="tag"># 差分约束</a>
+              <a href="/tags/%E5%9C%86%E6%96%B9%E6%A0%91/" rel="tag"># 圆方树</a>
           </div>
 
         
@@ -520,7 +528,7 @@ dfn_x=low_x</script><p>此处先不做过多阐述。</p>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">73</span>
+          <span class="site-state-item-count">133</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -533,7 +541,7 @@ dfn_x=low_x</script><p>此处先不做过多阐述。</p>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-count">80</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -587,12 +595,12 @@ dfn_x=low_x</script><p>此处先不做过多阐述。</p>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">300k</span>
+    <span title="站点总字数">451k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:33</span>
+    <span title="站点阅读时长">6:50</span>
 </div>
 
         

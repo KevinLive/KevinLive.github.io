@@ -28,7 +28,7 @@
 <meta property="og:description" content="有比较好想的 Trie 树做法。但是树上差分更巧妙。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-23T11:23:26.000Z">
-<meta property="article:modified_time" content="2023-06-24T10:58:27.970Z">
+<meta property="article:modified_time" content="2023-07-26T02:01:03.998Z">
 <meta property="article:author" content="Live">
 <meta property="article:tag" content="题解">
 <meta property="article:tag" content="Trie">
@@ -223,7 +223,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-24 18:58:27" itemprop="dateModified" datetime="2023-06-24T18:58:27+08:00">2023-06-24</time>
+                <time title="修改时间：2023-07-26 10:01:03" itemprop="dateModified" datetime="2023-07-26T10:01:03+08:00">2023-07-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -262,9 +262,9 @@
       
         <p>有比较好想的 Trie 树做法。但是树上差分更巧妙。</p>
 <span id="more"></span>
-<p>从下往上做。从儿子继承到父亲，使得儿子内所有点到父亲的距离等于儿子内所有点到儿子的距离 $+1$，也就是全局 $+1$ 操作。并且维护的信息是异或和。于是我们直接 01-Trie 合并即可。时间复杂度 $\mathcal O(n\log V)$。</p>
+<p>从下往上做。从儿子继承到父亲，使得儿子内所有点到父亲的距离等于儿子内所有点到儿子的距离 $+1$，也就是全局 $+1$ 操作。并且维护的信息是异或和。类似于线段树合并，我们直接 01-Trie 合并即可。时间复杂度 $\mathcal O(n\log V)$。</p>
 <p>换种思路，我们对于每一个 $v_i$ 分别考虑其对祖先的贡献。考虑整个 $+1$ 然后进位的过程，对于第 $k$ 位为 $1$，那么对它的祖先的第 $k$ 位贡献 $\underbrace{11\cdots 11}_{2^k-(v_i\text{ mod } 2^k)}\underbrace{00\cdots 00}_{2^k}\underbrace{11\cdots 11}_{2^k}$。根据这一点进行树上差分。给定差分数组 $g[x][i]$ 表示 $x$ 第 $i$ 位的差分。把当前 $v_i$ 每一位的差分往上传递到，把 $g[x][i]$ 的差分到 $g[fa_{x,2^i}][i]$。需要长链剖分求 $k$ 级祖先，时间复杂度 $\mathcal O(n\log n + n\log V)$。常数要小一点。</p>
-<p>实际上有更好的实现方式。我们发现对于每个点，产生差分的点的充要条件是 $d_i=x\pmod {2^k}$。我们开一个新的 $p[k][x]$ 表示 $d_i=x\pmod {2^k}$ 的差分。递归之前先去掉已经原来的差分数组，再递归得到子树的贡献，再算出当前点的答案即可。时间复杂度 $\mathcal O(n\log n)$。常数很小。</p>
+<p>实际上有更好的实现方式。我们发现对于每个点，产生差分的点的充要条件是 $d_i=x\pmod {2^k}$。我们开一个新的 $p[k][x]$ 表示 $d_i=x\pmod {2^k}$ 的差分。递归之前先去掉已经原来的差分数组，再递归得到子树的贡献，再算出当前点的答案即可。时间复杂度 $\mathcal O(n\log V)$。常数很小。</p>
 <p>具体实现参考如下。</p>
 <details class="success"><summary><i class="fa fa-check fa-fw"></i>Code<div class="box-open-button"><i class="fa fa-chevron-down fa-fw"></i></div></summary>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">5.26e5</span>+<span class="number">10</span>,K=<span class="number">21</span>;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">read</span><span class="params">(T &amp;x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    x=<span class="number">0</span>;<span class="type">bool</span> f=<span class="number">0</span>;</span><br><span class="line">    <span class="type">char</span> ch=<span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">while</span>(ch&lt;<span class="string">&#x27;0&#x27;</span>||ch&gt;<span class="string">&#x27;9&#x27;</span>)&#123;<span class="keyword">if</span>(ch==<span class="string">&#x27;-&#x27;</span>)f=<span class="number">1</span>;ch=<span class="built_in">getchar</span>();&#125;</span><br><span class="line">    <span class="keyword">while</span>(ch&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;ch&lt;=<span class="string">&#x27;9&#x27;</span>)x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(ch^<span class="number">48</span>),ch=<span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">if</span>(f)x=-x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>,<span class="keyword">class</span> ...T1&gt;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">read</span><span class="params">(T &amp;x,T1 &amp;...x1)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">read</span>(x),<span class="built_in">read</span>(x1...);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> a[N],p[K][N];</span><br><span class="line"><span class="type">int</span> tot,head[N],ver[N&lt;&lt;<span class="number">1</span>],ne[N&lt;&lt;<span class="number">1</span>];</span><br><span class="line">ll ans;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> u,<span class="type">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ver[++tot]=v;</span><br><span class="line">    ne[tot]=head[u];</span><br><span class="line">    head[u]=tot;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> d)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> res=a[x];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;K;i++)res^=p[i][d&amp;((<span class="number">1</span>&lt;&lt;i)<span class="number">-1</span>)];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=head[x];i;i=ne[i])</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> y=ver[i];</span><br><span class="line">        res^=<span class="built_in">dfs</span>(y,d+<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;K;i++)res^=p[i][d&amp;((<span class="number">1</span>&lt;&lt;i)<span class="number">-1</span>)];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;K;i++)p[i][(d+a[x])&amp;((<span class="number">1</span>&lt;&lt;i)<span class="number">-1</span>)]^=<span class="number">1</span>&lt;&lt;i;</span><br><span class="line">    ans+=res;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">read</span>(n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)<span class="built_in">read</span>(a[i]);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>,fa;i&lt;=n;i++)<span class="built_in">read</span>(fa),<span class="built_in">add</span>(fa,i);</span><br><span class="line">    <span class="built_in">dfs</span>(<span class="number">1</span>,<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -371,7 +371,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">73</span>
+          <span class="site-state-item-count">133</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -384,7 +384,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-count">80</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -438,12 +438,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">300k</span>
+    <span title="站点总字数">451k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:33</span>
+    <span title="站点阅读时长">6:50</span>
 </div>
 
         

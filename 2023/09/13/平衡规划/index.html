@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+  <style type="text/css">details.note,details.success,details.failure,details.warning,details.info,details.question,details.example,details.quote,details.code{display:block!important;padding-top:0!important;box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2)!important;position:relative!important;margin:1.5625em 0!important;padding:0 1em!important;border-left:.2em solid!important;border-radius:.1em!important;font-size:.9em!important;overflow:auto!important;}details.note:not([open]),details.success:not([open]),details.failure:not([open]),details.warning:not([open]),details.info:not([open]),details.question:not([open]),details.example:not([open]),details.quote:not([open]),details.code:not([open]){padding-bottom:0!important;}details.note{border-left-color:#448aff!important;}details.success{border-left-color:#00c853!important;}details.failure{border-left-color:#ff5252!important;}details.warning{border-left-color:#ff9100!important;}details.info{border-left-color:#00b8d4!important;}details.question{border-left-color:#64dd17!important;}details.example{border-left-color:#651fff!important;}details.quote{border-left-color:#9e9e9e!important;}details.code{border-left-color:#a0a0a0!important;}details.note>summary,details.success>summary,details.failure>summary,details.warning>summary,details.info>summary,details.question>summary,details.example>summary,details.quote>summary,details.code>summary{margin:0 -1em 1em -1em;padding:.4em .6em .4em .6em;border-bottom:.05em solid;font-weight:700;display:block;outline:none;cursor:pointer;}details.note>summary{border-bottom-color:rgba(68,138,255,.1);background-color:rgba(68,138,255,.1);}details.success>summary{border-bottom-color:rgba(0,200,83,.1);background-color:rgba(0,200,83,.1);}details.failure>summary{border-bottom-color:rgba(255,82,82,.1);background-color:rgba(255,82,82,.1);}details.warning>summary{border-bottom-color:rgba(255,145,0,.1);background-color:rgba(255,145,0,.1);}details.info>summary{border-bottom-color:rgba(0,184,212,.1);background-color:rgba(0,184,212,.1);}details.question>summary{border-bottom-color:rgba(100,221,23,.1);background-color:rgba(100,221,23,.1);}details.example>summary{border-bottom-color:rgba(101,31,255,.1);background-color:rgba(101,31,255,.1);}details.quote>summary{border-bottom-color:rgba(158,158,158,.1);background-color:rgba(158,158,158,.1);}details.code>summary{border-bottom-color:rgba(160,160,160,.1);background-color:rgba(160,160,160,.1);}details.note:not([open])>summary,details.success:not([open])>summary,details.failure:not([open])>summary,details.warning:not([open])>summary,details.info:not([open])>summary,details.question:not([open])>summary,details.example:not([open])>summary,details.quote:not([open])>summary,details.code:not([open])>summary{border-bottom:0;margin-bottom:0;}details.note>summary>div.box-open-button,details.success>summary>div.box-open-button,details.failure>summary>div.box-open-button,details.warning>summary>div.box-open-button,details.info>summary>div.box-open-button,details.question>summary>div.box-open-button,details.example>summary>div.box-open-button,details.quote>summary>div.box-open-button,details.code>summary>div.box-open-button{float:right;}details.note>summary>i,details.success>summary>i,details.failure>summary>i,details.warning>summary>i,details.info>summary>i,details.question>summary>i,details.example>summary>i,details.quote>summary>i,details.code>summary>i,details.note>summary>div.box-open-button>i,details.success>summary>div.box-open-button>i,details.failure>summary>div.box-open-button>i,details.warning>summary>div.box-open-button>i,details.info>summary>div.box-open-button>i,details.question>summary>div.box-open-button>i,details.example>summary>div.box-open-button>i,details.quote>summary>div.box-open-button>i,details.code>summary>div.box-open-button>i{margin:0 .6125em 0 .6125em;}details.note>summary>i{color:#448aff;}details.success>summary>i{color:#00c853;}details.failure>summary>i{color:#ff5252;}details.warning>summary>i{color:#ff9100;}details.info>summary>i{color:#00b8d4;}details.question>summary>i{color:#64dd17;}details.example>summary>i{color:#651fff;}details.quote>summary>i{color:#9e9e9e;}details.code>summary>i{color:#a0a0a0;}details.note>summary>div.box-open-button>i,details.success>summary>div.box-open-button>i,details.failure>summary>div.box-open-button>i,details.warning>summary>div.box-open-button>i,details.info>summary>div.box-open-button>i,details.question>summary>div.box-open-button>i,details.example>summary>div.box-open-button>i,details.quote>summary>div.box-open-button>i,details.code>summary>div.box-open-button>i{color:rgba(0,0,0,.26);}details[open].note>summary>div.box-open-button>i,details[open].success>summary>div.box-open-button>i,details[open].failure>summary>div.box-open-button>i,details[open].warning>summary>div.box-open-button>i,details[open].info>summary>div.box-open-button>i,details[open].question>summary>div.box-open-button>i,details[open].example>summary>div.box-open-button>i,details[open].quote>summary>div.box-open-button>i,details[open].code>summary>div.box-open-button>i{transform:rotate(180deg);}</style>
+  <meta name="description" content="平衡规划小记。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="平衡规划">
+<meta property="og:url" content="http://example.com/2023/09/13/%E5%B9%B3%E8%A1%A1%E8%A7%84%E5%88%92/index.html">
+<meta property="og:site_name" content="Live&#39;s Blog">
+<meta property="og:description" content="平衡规划小记。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-09-13T00:35:30.000Z">
+<meta property="article:modified_time" content="2023-09-15T06:19:39.204Z">
+<meta property="article:author" content="Live">
+<meta property="article:tag" content="平衡规划">
+<meta property="article:tag" content="学习笔记">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2023/09/13/%E5%B9%B3%E8%A1%A1%E8%A7%84%E5%88%92/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>平衡规划 | Live's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Live's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">I am.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-friends">
+
+    <a href="/friends/" rel="section"><i class="fas fa-link fa-fw"></i>友链</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/13/%E5%B9%B3%E8%A1%A1%E8%A7%84%E5%88%92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Live">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Live's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          平衡规划
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-09-13 08:35:30" itemprop="dateCreated datePublished" datetime="2023-09-13T08:35:30+08:00">2023-09-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-09-15 14:19:39" itemprop="dateModified" datetime="2023-09-15T14:19:39+08:00">2023-09-15</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>平衡规划小记。</p>
+<span id="more"></span>
+<h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0.前言"></a>0.前言</h2><blockquote>
+<p>平衡规划其实也可以算是一种思想，他其实是不同算法的综合， 出题人为了增加你的码量和思维难度而产生的新的做法，但一般 良心点的出题人对于想到一个都还是会给较多的分数的。</p>
+<p>——mydcwfy</p>
+</blockquote>
+<p>平衡规划大致分为以下四种：</p>
+<p>​    1.隐含的和相同，然后可以根号或者是其他之类的分治。一般有序列出现次数和为 $\mathcal O(n)$ 和图的度数和为 $\mathcal O(m)$ 两种。 </p>
+<p>​    2.题面给定 $n + m$ 或 $n\times m$，然后按照 $n,m ≤ \sqrt{n\times m}$ 或 $n, m ≤ \frac{n + m}{ 2}$ 分治。 </p>
+<p>​    3.题目给定 $n$，容易计算 $\sqrt n$ 以内的答案且有规律性，用 $\sqrt n$ 个答案来合并出总答案。也有可能是利用 $\frac{n}{2}$ 合并两端。 </p>
+<p>​    4.不同算法因为切入点不同，得到的时间复杂度不同，比如 $O(nB)$ 和 $O(\frac{n^2}{B} )$，合适的平衡他们，让最劣复杂度最优。</p>
+<p>接下来以例题为主介绍平衡规划的思想。</p>
+<h2 id="1-出现次数和一定"><a href="#1-出现次数和一定" class="headerlink" title="1.出现次数和一定"></a>1.出现次数和一定</h2><p>经典，很多时候看到与出现次数相关就可以考虑平衡规划。</p>
+<h3 id="1-1-P8349-SDOI-SXOI2022-整数序列"><a href="#1-1-P8349-SDOI-SXOI2022-整数序列" class="headerlink" title="1.1 P8349 [SDOI/SXOI2022] 整数序列"></a>1.1 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P8349">P8349 [SDOI/SXOI2022] 整数序列</a></h3><p>我们分为几种情况来考虑，设阈值 $B$，出现次数为 $cnt_x$ 表示 $x$ 的出现次数。当 $cnt_x\le B$ 我们称之为“小“，否则称为”大“。我们容易想到把每个数的位置拿出来做是相对容易的。</p>
+<h4 id="1-小对小"><a href="#1-小对小" class="headerlink" title="1.小对小"></a>1.小对小</h4><p>我们直接暴力做，把 $x,y$ 出现的位置单独拉出来，前缀 min 统计一下即可。时间复杂度 $\mathcal O(q(cnt_x+cnt_y))=\mathcal O(qB)$。</p>
+<h4 id="2-大对大"><a href="#2-大对大" class="headerlink" title="2.大对大"></a>2.大对大</h4><p>我们发现大对大的情况其实很少，种类不超过 $\frac{n}{B}$ 个。所以我们还是暴力做，用 <code>map</code> 记忆化一下即可。时间复杂度 $\displaystyle \mathcal O(\frac{n^2}{B})$。</p>
+<h4 id="3-小对大"><a href="#3-小对大" class="headerlink" title="3.小对大"></a>3.小对大</h4><p>我们发现还是有很多位置是</p>
+<h2 id="2-度数和一定"><a href="#2-度数和一定" class="headerlink" title="2.度数和一定"></a>2.度数和一定</h2><p>有些图论题目比较感觉复杂度假的但是又严重跑不满，和度数相关的，可以考虑用度数平衡规划。</p>
+<h3 id="2-1-Dinic-求解二分图最大匹配复杂度证明"><a href="#2-1-Dinic-求解二分图最大匹配复杂度证明" class="headerlink" title="2.1 Dinic 求解二分图最大匹配复杂度证明"></a>2.1 Dinic 求解二分图最大匹配复杂度证明</h3><p>众所周知，用 Dinic 求解二分图最大匹配复杂度是 $\mathcal O(m\sqrt n)$，这是如何证明的呢？</p>
+<p>先考虑一个结论，当我们使用 Dinic 进行增广时，每个当前增广路的长度一定比上一次更长。因为 Dinic 是多路增广，长度相同或者更短的增广路会在前面更新。</p>
+<p>单次增广的时间复杂度是 $\mathcal O(m)$ 的。我们不妨设当前已经进行了 $B$ 轮，之后新一轮增广的增广路长度必然大于 $B$，这样不交的路径一定只有不超过 $\displaystyle \frac{n}{B}$ 条。而每条边最多进行一次增广，那么后半部分的时间复杂度为 $\displaystyle \mathcal O(\frac{nm}{B})$。</p>
+<p>于是我们得到两部分的时间复杂度分别为为 $\displaystyle \mathcal O(mB),\mathcal O(\frac{nm}{B})$。平衡规划一下， $\displaystyle \mathcal O(mB)=\mathcal O(\frac{nm}{B})$，取 $B=\sqrt n$ 得到其时间复杂度为 $\mathcal O(m\sqrt n)$。</p>
+<h3 id="2-2-P1989-无向图三元环计数"><a href="#2-2-P1989-无向图三元环计数" class="headerlink" title="2.2 P1989 无向图三元环计数"></a>2.2 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1989">P1989 无向图三元环计数</a></h3><p>经典题，我们暴力做有几种。枚举两条边是 $\mathcal O(m^2)$ 的；枚举一个点及其对边是 $\mathcal O(nm)$ 的；枚举 $u$ 及其可达点 $v$，与 $v$ 可达点 $w$ 是 $\mathcal O(\sum_i \deg_i^2)$ 的。</p>
+<p>考虑优化第三个算法，先统计每个点的度数，我们只保留度数小的点连向度数大的点的边，然后直接使用第三个算法。我们接下来说明这样复杂度 $\mathcal O(m\sqrt m)$。</p>
+<p>首先我们这样建出来的是一个 DAG。考虑每条边 $(u,v)$ 的贡献就是 $\text{out}_v$。显然复杂度是 $\sum_{i=1}^m out_{v_i}$，而对于 $\deg_v=i$，$\text{out}_v$ 显然有两个上界 $i,\frac{m}{i}$，而对 $\min(i,\frac{m}{i})$ 平衡规划，那么上界就是 $\sqrt m$。所以时间复杂度为 $\mathcal O(m\sqrt m)$。</p>
+<details class="success"><summary><i class="fa fa-check fa-fw"></i>Code<div class="box-open-button"><i class="fa fa-chevron-down fa-fw"></i></div></summary>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">1e5</span>+<span class="number">10</span>,M=<span class="number">2e5</span>+<span class="number">10</span>;</span><br><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">read</span><span class="params">(T &amp;x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    x=<span class="number">0</span>;<span class="type">int</span> f=<span class="number">0</span>;</span><br><span class="line">    <span class="type">char</span> ch=<span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">while</span>(ch&lt;<span class="string">&#x27;0&#x27;</span>||ch&gt;<span class="string">&#x27;9&#x27;</span>)&#123;<span class="keyword">if</span>(ch==<span class="string">&#x27;-&#x27;</span>)f=<span class="number">1</span>;ch=<span class="built_in">getchar</span>();&#125;</span><br><span class="line">    <span class="keyword">while</span>(ch&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;ch&lt;=<span class="string">&#x27;9&#x27;</span>)x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(ch^<span class="number">48</span>),ch=<span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">if</span>(f)x=~x+<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T,<span class="keyword">class</span> ...T1&gt;</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">read</span><span class="params">(T &amp;x,T1 &amp;...x1)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">read</span>(x),<span class="built_in">read</span>(x1...);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> n,m;</span><br><span class="line"><span class="type">int</span> u[M],v[M];</span><br><span class="line"><span class="type">int</span> deg[N];</span><br><span class="line">vector&lt;<span class="type">int</span>&gt;e[N];</span><br><span class="line"><span class="type">bool</span> vis[N];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">read</span>(n,m);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;i++)<span class="built_in">read</span>(u[i],v[i]),deg[u[i]]++,deg[v[i]]++;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=m;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(u[i]&gt;v[i])<span class="built_in">swap</span>(u[i],v[i]);</span><br><span class="line">        <span class="keyword">if</span>(deg[u[i]]&gt;deg[v[i]])<span class="built_in">swap</span>(u[i],v[i]);</span><br><span class="line">        e[u[i]].<span class="built_in">push_back</span>(v[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> u=<span class="number">1</span>;u&lt;=n;u++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> v:e[u])vis[v]=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> v:e[u])</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">auto</span> w:e[v])</span><br><span class="line">                ans+=vis[w];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> v:e[u])vis[v]=<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</details>
+<h2 id="3-不同算法的平衡规划"><a href="#3-不同算法的平衡规划" class="headerlink" title="3.不同算法的平衡规划"></a>3.不同算法的平衡规划</h2><h3 id="3-1-CF1207E-Remainder-Problem"><a href="#3-1-CF1207E-Remainder-Problem" class="headerlink" title="3.1 CF1207E Remainder Problem"></a>3.1 <a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/1207/F">CF1207E Remainder Problem</a></h3><p>经典例题。我们注意到“取模”这个很好的条件。设阈值为 $B$，容易设计以下连个暴力：</p>
+<p>​    1.修改：直接对 $a[x]$ 修改，$\displaystyle \mathcal O(1)$；查询：枚举 $k$，直接查询 $a[kx+y]$ 的和，$\displaystyle \mathcal O(\frac{n}{B})$。</p>
+<p>​    2.设数组 $cnt[i][j]$ 表示 $x\equiv j\pmod i$ 位置上 $a[x]$ 之和。修改：枚举 $i$，对 $cnt[i][x\pmod i]$ 进行修改，$\displaystyle \mathcal O(B)$；查询：答案为         $cnt[x][y]$，时间复杂度 $\mathcal O(1)$。</p>
+<p>那么我们直接对两个算法进行平衡规划。$\displaystyle \mathcal O(\frac{n}{B})=\mathcal O(B)$，取 $B=\sqrt n$。得到时间复杂度为 $\displaystyle \mathcal O(n\sqrt m)$。</p>
+<details class="success"><summary><i class="fa fa-check fa-fw"></i>Code<div class="box-open-button"><i class="fa fa-chevron-down fa-fw"></i></div></summary>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+</details>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%B9%B3%E8%A1%A1%E8%A7%84%E5%88%92/" rel="tag"># 平衡规划</a>
+              <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"># 学习笔记</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/09/08/LOJ-3566-%E3%80%8CNOIP2021%E3%80%8D%E6%96%B9%E5%B7%AE/" rel="prev" title="LOJ#3566. 「NOIP2021」方差">
+      <i class="fa fa-chevron-left"></i> LOJ#3566. 「NOIP2021」方差
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/09/16/P4827-%E5%9B%BD%E5%AE%B6%E9%9B%86%E8%AE%AD%E9%98%9F-Crash-%E7%9A%84%E6%96%87%E6%98%8E%E4%B8%96%E7%95%8C/" rel="next" title="P4827 [国家集训队] Crash 的文明世界">
+      P4827 [国家集训队] Crash 的文明世界 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-%E5%89%8D%E8%A8%80"><span class="nav-text">0.前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%E5%92%8C%E4%B8%80%E5%AE%9A"><span class="nav-text">1.出现次数和一定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-P8349-SDOI-SXOI2022-%E6%95%B4%E6%95%B0%E5%BA%8F%E5%88%97"><span class="nav-text">1.1 P8349 [SDOI&#x2F;SXOI2022] 整数序列</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%B0%8F%E5%AF%B9%E5%B0%8F"><span class="nav-text">1.小对小</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%A4%A7%E5%AF%B9%E5%A4%A7"><span class="nav-text">2.大对大</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%B0%8F%E5%AF%B9%E5%A4%A7"><span class="nav-text">3.小对大</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%BA%A6%E6%95%B0%E5%92%8C%E4%B8%80%E5%AE%9A"><span class="nav-text">2.度数和一定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-Dinic-%E6%B1%82%E8%A7%A3%E4%BA%8C%E5%88%86%E5%9B%BE%E6%9C%80%E5%A4%A7%E5%8C%B9%E9%85%8D%E5%A4%8D%E6%9D%82%E5%BA%A6%E8%AF%81%E6%98%8E"><span class="nav-text">2.1 Dinic 求解二分图最大匹配复杂度证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-P1989-%E6%97%A0%E5%90%91%E5%9B%BE%E4%B8%89%E5%85%83%E7%8E%AF%E8%AE%A1%E6%95%B0"><span class="nav-text">2.2 P1989 无向图三元环计数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E4%B8%8D%E5%90%8C%E7%AE%97%E6%B3%95%E7%9A%84%E5%B9%B3%E8%A1%A1%E8%A7%84%E5%88%92"><span class="nav-text">3.不同算法的平衡规划</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-CF1207E-Remainder-Problem"><span class="nav-text">3.1 CF1207E Remainder Problem</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Live"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Live</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">133</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">80</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/kevinlive" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;kevinlive" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2098412209@qq.com" title="E-Mail → mailto:2098412209@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=2098412209&site=qq&menu=yes" title="QQ → http:&#x2F;&#x2F;wpa.qq.com&#x2F;msgrd?v&#x3D;3&amp;uin&#x3D;2098412209&amp;site&#x3D;qq&amp;menu&#x3D;yes" rel="noopener" target="_blank"><i class="fab fa-qq fa-fw"></i>QQ</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.luogu.com.cn/user/109659" title="Luogu → https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;user&#x2F;109659" rel="noopener" target="_blank"><i class=" fa-fw"></i>Luogu</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Live</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">451k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:50</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '105fcec5366e0f679318',
+      clientSecret: 'ce01d85deec32a8ec976a1b9dc4c93e4bd168190',
+      repo        : 'GitalkStorage',
+      owner       : 'KevinLive',
+      admin       : ['KevinLive'],
+      id          : 'bcca5611dfb17a21ac73696088a0a37e',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>

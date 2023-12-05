@@ -267,7 +267,7 @@
 <span id="more"></span>
 <p><del>虚高题</del>。</p>
 <p>update on 2022.11.13。原题解被 @zhanghenglei 所 Hack。现在已将解法修正，如果仍有问题，欢迎指出qwq。</p>
-<p>不难想到用 $f_x,g_x$ 分别表示以 $x$ 为根的子树内和子树外最长链的长度。答案就是 $\max\{f_x\times g_x\}$。$f_x$ 很容易求，考虑 $g_x$ 怎么求。</p>
+<p>不难想到用 $f_x,g_x$ 分别表示以 $x$ 为根的子树内和子树外最长链的长度。答案就是 $\max{f_x\times g_x}$。$f_x$ 很容易求，考虑 $g_x$ 怎么求。</p>
 <p>$g_x$ 可以从父亲节点转移过来，这启发我们可以类似于换根 DP 的方法来求 $g_x$。</p>
 <p>考虑怎么构成一条子树外的链。无非是从父节点往上延伸，或者从父节点往下延伸的链。再将他们最长的两段在父节点拼起来成为一个答案。</p>
 <p>但是我们选取的两段链不能在 $x$ 的子树中。这就意味着我们需要先求出，从父节点往下延伸的链的最大值、亚大值和次大值，以及对应的子节点。转移时判断一下所选的链有没有在 $x$ 的子树中就行。</p>
@@ -382,7 +382,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">73</span>
+          <span class="site-state-item-count">133</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -395,7 +395,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-count">80</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -449,12 +449,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">300k</span>
+    <span title="站点总字数">451k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:33</span>
+    <span title="站点阅读时长">6:50</span>
 </div>
 
         

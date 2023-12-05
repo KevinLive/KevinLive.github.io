@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+  <style type="text/css">details.note,details.success,details.failure,details.warning,details.info,details.question,details.example,details.quote,details.code{display:block!important;padding-top:0!important;box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2)!important;position:relative!important;margin:1.5625em 0!important;padding:0 1em!important;border-left:.2em solid!important;border-radius:.1em!important;font-size:.9em!important;overflow:auto!important;}details.note:not([open]),details.success:not([open]),details.failure:not([open]),details.warning:not([open]),details.info:not([open]),details.question:not([open]),details.example:not([open]),details.quote:not([open]),details.code:not([open]){padding-bottom:0!important;}details.note{border-left-color:#448aff!important;}details.success{border-left-color:#00c853!important;}details.failure{border-left-color:#ff5252!important;}details.warning{border-left-color:#ff9100!important;}details.info{border-left-color:#00b8d4!important;}details.question{border-left-color:#64dd17!important;}details.example{border-left-color:#651fff!important;}details.quote{border-left-color:#9e9e9e!important;}details.code{border-left-color:#a0a0a0!important;}details.note>summary,details.success>summary,details.failure>summary,details.warning>summary,details.info>summary,details.question>summary,details.example>summary,details.quote>summary,details.code>summary{margin:0 -1em 1em -1em;padding:.4em .6em .4em .6em;border-bottom:.05em solid;font-weight:700;display:block;outline:none;cursor:pointer;}details.note>summary{border-bottom-color:rgba(68,138,255,.1);background-color:rgba(68,138,255,.1);}details.success>summary{border-bottom-color:rgba(0,200,83,.1);background-color:rgba(0,200,83,.1);}details.failure>summary{border-bottom-color:rgba(255,82,82,.1);background-color:rgba(255,82,82,.1);}details.warning>summary{border-bottom-color:rgba(255,145,0,.1);background-color:rgba(255,145,0,.1);}details.info>summary{border-bottom-color:rgba(0,184,212,.1);background-color:rgba(0,184,212,.1);}details.question>summary{border-bottom-color:rgba(100,221,23,.1);background-color:rgba(100,221,23,.1);}details.example>summary{border-bottom-color:rgba(101,31,255,.1);background-color:rgba(101,31,255,.1);}details.quote>summary{border-bottom-color:rgba(158,158,158,.1);background-color:rgba(158,158,158,.1);}details.code>summary{border-bottom-color:rgba(160,160,160,.1);background-color:rgba(160,160,160,.1);}details.note:not([open])>summary,details.success:not([open])>summary,details.failure:not([open])>summary,details.warning:not([open])>summary,details.info:not([open])>summary,details.question:not([open])>summary,details.example:not([open])>summary,details.quote:not([open])>summary,details.code:not([open])>summary{border-bottom:0;margin-bottom:0;}details.note>summary>div.box-open-button,details.success>summary>div.box-open-button,details.failure>summary>div.box-open-button,details.warning>summary>div.box-open-button,details.info>summary>div.box-open-button,details.question>summary>div.box-open-button,details.example>summary>div.box-open-button,details.quote>summary>div.box-open-button,details.code>summary>div.box-open-button{float:right;}details.note>summary>i,details.success>summary>i,details.failure>summary>i,details.warning>summary>i,details.info>summary>i,details.question>summary>i,details.example>summary>i,details.quote>summary>i,details.code>summary>i,details.note>summary>div.box-open-button>i,details.success>summary>div.box-open-button>i,details.failure>summary>div.box-open-button>i,details.warning>summary>div.box-open-button>i,details.info>summary>div.box-open-button>i,details.question>summary>div.box-open-button>i,details.example>summary>div.box-open-button>i,details.quote>summary>div.box-open-button>i,details.code>summary>div.box-open-button>i{margin:0 .6125em 0 .6125em;}details.note>summary>i{color:#448aff;}details.success>summary>i{color:#00c853;}details.failure>summary>i{color:#ff5252;}details.warning>summary>i{color:#ff9100;}details.info>summary>i{color:#00b8d4;}details.question>summary>i{color:#64dd17;}details.example>summary>i{color:#651fff;}details.quote>summary>i{color:#9e9e9e;}details.code>summary>i{color:#a0a0a0;}details.note>summary>div.box-open-button>i,details.success>summary>div.box-open-button>i,details.failure>summary>div.box-open-button>i,details.warning>summary>div.box-open-button>i,details.info>summary>div.box-open-button>i,details.question>summary>div.box-open-button>i,details.example>summary>div.box-open-button>i,details.quote>summary>div.box-open-button>i,details.code>summary>div.box-open-button>i{color:rgba(0,0,0,.26);}details[open].note>summary>div.box-open-button>i,details[open].success>summary>div.box-open-button>i,details[open].failure>summary>div.box-open-button>i,details[open].warning>summary>div.box-open-button>i,details[open].info>summary>div.box-open-button>i,details[open].question>summary>div.box-open-button>i,details[open].example>summary>div.box-open-button>i,details[open].quote>summary>div.box-open-button>i,details[open].code>summary>div.box-open-button>i{transform:rotate(180deg);}</style>
+  <meta name="description" content="比较冷门，还是学一下。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="弦图">
+<meta property="og:url" content="http://example.com/2023/09/21/%E5%BC%A6%E5%9B%BE/index.html">
+<meta property="og:site_name" content="Live&#39;s Blog">
+<meta property="og:description" content="比较冷门，还是学一下。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-09-21T11:28:20.000Z">
+<meta property="article:modified_time" content="2023-10-01T13:46:49.796Z">
+<meta property="article:author" content="Live">
+<meta property="article:tag" content="题解">
+<meta property="article:tag" content="图论">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2023/09/21/%E5%BC%A6%E5%9B%BE/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>弦图 | Live's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Live's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">I am.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-friends">
+
+    <a href="/friends/" rel="section"><i class="fas fa-link fa-fw"></i>友链</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/09/21/%E5%BC%A6%E5%9B%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Live">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Live's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          弦图
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-09-21 19:28:20" itemprop="dateCreated datePublished" datetime="2023-09-21T19:28:20+08:00">2023-09-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-10-01 21:46:49" itemprop="dateModified" datetime="2023-10-01T21:46:49+08:00">2023-10-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>比较冷门，还是学一下。</p>
+<span id="more"></span>
+<h2 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h2><p><strong>弦</strong>：连接环中不相邻两点的边。</p>
+<p><strong>弦图</strong>：任意长度大于 $3$ 的环都有一个弦的图称为弦图。</p>
+<h2 id="2-弦图的判定"><a href="#2-弦图的判定" class="headerlink" title="2.弦图的判定"></a>2.弦图的判定</h2><h3 id="2-1-点割集"><a href="#2-1-点割集" class="headerlink" title="2.1 点割集"></a>2.1 点割集</h3><p>对于图 $G$ 上的两点 $u,v$，定义这两点间的 <strong>点割集</strong> 为满足删除这一集合后，$u,v$ 两点之间不连通。如果关于 $u,v$ 两点间的一个点割集的任意子集都不是点割集，则称这个点割集为 <strong>极小点割集</strong>。</p>
+<h3 id="2-2-单纯点"><a href="#2-2-单纯点" class="headerlink" title="2.2 单纯点"></a>2.2 单纯点</h3><p>设 $N(x)$ 表示与点 $x$ 相邻的点集。若点集 ${x}+N(x)$ 的导出子图为一个团，则称点 $x$ 为单纯点。</p>
+<h3 id="2-3-完美消除序列"><a href="#2-3-完美消除序列" class="headerlink" title="2.3 完美消除序列"></a>2.3 完美消除序列</h3><p>令 $n=|V|$，完美消除序列 $v_1,v_2,\ldots ,v_n$ 为 $1,2,\ldots ,n$ 的一个排列，满足 $v_i$ 在 ${v_i,v_{i+1},\ldots ,v_n}$ 的导出子图中为单纯点。</p>
+<p>一个无向图是<strong>弦图</strong>当且仅当其有一个完全消除序列。</p>
+<h3 id="2-4-最大势算法-MCS"><a href="#2-4-最大势算法-MCS" class="headerlink" title="2.4 最大势算法 MCS"></a>2.4 最大势算法 MCS</h3><p>我们按照逆序即 $n$ 到 $1$ 的顺序给每个点编号，最终得到的序列就是完美消除序列。设 $label_x$ 为与 $x$ 相邻的已标号的节点。我们每次选择 $label_x$ 最大的节点进行编号。 我们用链表维护 $label_x=i$ 的节点即可。时间复杂度为 $\mathcal O(n+m)$。对于<strong>弦图</strong>使用该算法即可得到完美消除序列。</p>
+<h4 id="2-4-1-证明"><a href="#2-4-1-证明" class="headerlink" title="2.4.1 证明"></a>2.4.1 证明</h4><p><strong>Lemma 1</strong>: 对于任意弦图，一定不存在一个序列 $v_0,v_1\cdots,v_k (k\le 2)$ 满足：</p>
+<ol>
+<li>$v_0,v_1\cdots,v_k$ 的导出子图是一条链。</li>
+<li>$\alpha(v_0)&gt;\alpha(v_i)(i\in[1,k])$。</li>
+<li>存在 $i\in[1,k-1]$，满足 $\alpha(v_i)&lt;\alpha(v_{i+1})&lt;\dots&lt;\alpha(v_k)$ 且 $\alpha(v_i)&lt;\alpha(v_{i-1})&lt;\dots&lt;\alpha(v_1)&lt;\alpha(v_k)&lt;\alpha(v_0)$。</li>
+</ol>
+<p><strong>证明</strong>:</p>
+<p>因为 $\alpha(v_1)&lt;\alpha(v_k)&lt;\alpha(v_0)$，且 $(v_0,v_1)$ 间有边相连，$(v_0,v_k)$ 间不相连,所以必然存在 $x$ 满足 $\alpha(v_k)&lt;\alpha(x)$，$(v_k,x)$ 间相连，$(v_1,x)$ 不相连。</p>
+<p>我们设最小的 $j\in(1,k]$ 满足 $(v_j,x)$ 相连。我们可以推出 $(v_0,x)$ 不相连，否则 $(v_0,v_1,\cdots,v_j,x,v_0)$ 构成一个长度大于等于 $4$ 且无弦的环。</p>
+<p>若 $\alpha(x)&lt;\alpha(v_0)$，则 $v_0,v_1\cdots,v_j,x$ 也是一个满足性质的序列。若 $\alpha(x)&gt;\alpha(v_0)$，则 $x,v_j\cdots,v_1,v_0$ 也是一个满足性质的序列。这样我们扩大了 $\min(\alpha(x),\alpha(v_0))$，一直推下去，则必然产生矛盾。</p>
+<p>设得到的序列中 $x$ 的位置为 $\alpha(x)$。我们要证明对于 $\alpha(u)&lt;\alpha(v)&lt;\alpha(w)$，若存在 $(u,v),(u,w)$ 相连，则必然存在 $(v,w)$ 相连。考虑反证， $(v,w)$ 不相连，那么 $w,u,v$ 就是一个满足 <strong>Lemma 1</strong> 的中性质的序列，我们证明这样的序列不存在，所以矛盾，$v,w$ 相连。</p>
+<h4 id="2-4-2-代码"><a href="#2-4-2-代码" class="headerlink" title="2.4.2 代码"></a>2.4.2 代码</h4><details class="success"><summary><i class="fa fa-check fa-fw"></i>Code<div class="box-open-button"><i class="fa fa-chevron-down fa-fw"></i></div></summary>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">MCS</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)t.<span class="built_in">add</span>(<span class="number">0</span>,i);</span><br><span class="line">    <span class="type">int</span> now=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=n;i;i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(!t.head[now])now--;</span><br><span class="line">        <span class="type">int</span> x=t.head[now];</span><br><span class="line">        ans[x]=i;</span><br><span class="line">        t.<span class="built_in">del</span>(now,x);</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=head[x];j;j=ne[j])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> y=ver[j];</span><br><span class="line">            <span class="keyword">if</span>(ans[y])<span class="keyword">continue</span>;</span><br><span class="line">            t.<span class="built_in">del</span>(label[y],y);</span><br><span class="line">            label[y]++;</span><br><span class="line">            now=<span class="built_in">max</span>(now,label[y]);</span><br><span class="line">            t.<span class="built_in">add</span>(label[y],y);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</details>
+<h3 id="2-5-判断一个序列是否是完美消除序列"><a href="#2-5-判断一个序列是否是完美消除序列" class="headerlink" title="2.5 判断一个序列是否是完美消除序列"></a>2.5 判断一个序列是否是完美消除序列</h3><p>根据完美消除序列的定义，设 $v_i$ 在 $v_i,v_{i+1},\cdots,v_n$ 中与 $v_i$ 相邻的按照原顺序为 $v_{c_1},v_{c_2},\cdots,v_{c_k}$，我们只需要判断 $v_{c_1}$ 与其它点是否有边相连即可。使用哈希表即可做到 $\mathcal O(n+m)$。下面给出一种不使用哈希表的做法。</p>
+<details class="success"><summary><i class="fa fa-check fa-fw"></i>Code<div class="box-open-button"><i class="fa fa-chevron-down fa-fw"></i></div></summary>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">bool</span> <span class="title">check</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ans[<span class="number">0</span>]=n+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> x=<span class="number">1</span>;x&lt;=n;x++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> pos=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=head[x];i;i=ne[i])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> y=ver[i];</span><br><span class="line">            <span class="keyword">if</span>(ans[y]&gt;ans[x]&amp;&amp;ans[y]&lt;ans[pos])pos=y;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(pos)vec[pos].<span class="built_in">push_back</span>(x);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> x=<span class="number">1</span>;x&lt;=n;x++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=head[x];i;i=ne[i])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> y=ver[i];</span><br><span class="line">            <span class="keyword">if</span>(ans[y]&gt;ans[x])vis[y]=x;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> y:vec[x])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i=head[y];i;i=ne[i])</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="type">int</span> z=ver[i];</span><br><span class="line">                <span class="keyword">if</span>(ans[z]&gt;ans[x]&amp;&amp;vis[z]&lt;x)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</details>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag"># 题解</a>
+              <a href="/tags/%E5%9B%BE%E8%AE%BA/" rel="tag"># 图论</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/09/20/P4229-%E6%9F%90%E4%BD%8D%E6%AD%8C%E5%A7%AC%E7%9A%84%E6%95%85%E4%BA%8B/" rel="prev" title="P4229 某位歌姬的故事">
+      <i class="fa fa-chevron-left"></i> P4229 某位歌姬的故事
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/09/21/%E4%BA%8C%E6%AC%A1%E5%89%A9%E4%BD%99/" rel="next" title="二次剩余">
+      二次剩余 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%AE%9A%E4%B9%89"><span class="nav-text">1.定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%BC%A6%E5%9B%BE%E7%9A%84%E5%88%A4%E5%AE%9A"><span class="nav-text">2.弦图的判定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E7%82%B9%E5%89%B2%E9%9B%86"><span class="nav-text">2.1 点割集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E5%8D%95%E7%BA%AF%E7%82%B9"><span class="nav-text">2.2 单纯点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E5%AE%8C%E7%BE%8E%E6%B6%88%E9%99%A4%E5%BA%8F%E5%88%97"><span class="nav-text">2.3 完美消除序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-%E6%9C%80%E5%A4%A7%E5%8A%BF%E7%AE%97%E6%B3%95-MCS"><span class="nav-text">2.4 最大势算法 MCS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-1-%E8%AF%81%E6%98%8E"><span class="nav-text">2.4.1 证明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-2-%E4%BB%A3%E7%A0%81"><span class="nav-text">2.4.2 代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E5%BA%8F%E5%88%97%E6%98%AF%E5%90%A6%E6%98%AF%E5%AE%8C%E7%BE%8E%E6%B6%88%E9%99%A4%E5%BA%8F%E5%88%97"><span class="nav-text">2.5 判断一个序列是否是完美消除序列</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Live"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Live</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">133</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">80</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/kevinlive" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;kevinlive" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2098412209@qq.com" title="E-Mail → mailto:2098412209@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=2098412209&site=qq&menu=yes" title="QQ → http:&#x2F;&#x2F;wpa.qq.com&#x2F;msgrd?v&#x3D;3&amp;uin&#x3D;2098412209&amp;site&#x3D;qq&amp;menu&#x3D;yes" rel="noopener" target="_blank"><i class="fab fa-qq fa-fw"></i>QQ</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.luogu.com.cn/user/109659" title="Luogu → https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;user&#x2F;109659" rel="noopener" target="_blank"><i class=" fa-fw"></i>Luogu</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Live</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">451k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:50</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '105fcec5366e0f679318',
+      clientSecret: 'ce01d85deec32a8ec976a1b9dc4c93e4bd168190',
+      repo        : 'GitalkStorage',
+      owner       : 'KevinLive',
+      admin       : ['KevinLive'],
+      id          : '954d1dd3f805dc0e0e4d52a338a8aad8',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>
