@@ -20,18 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
   <style type="text/css">details.note,details.success,details.failure,details.warning,details.info,details.question,details.example,details.quote,details.code{display:block!important;padding-top:0!important;box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2)!important;position:relative!important;margin:1.5625em 0!important;padding:0 1em!important;border-left:.2em solid!important;border-radius:.1em!important;font-size:.9em!important;overflow:auto!important;}details.note:not([open]),details.success:not([open]),details.failure:not([open]),details.warning:not([open]),details.info:not([open]),details.question:not([open]),details.example:not([open]),details.quote:not([open]),details.code:not([open]){padding-bottom:0!important;}details.note{border-left-color:#448aff!important;}details.success{border-left-color:#00c853!important;}details.failure{border-left-color:#ff5252!important;}details.warning{border-left-color:#ff9100!important;}details.info{border-left-color:#00b8d4!important;}details.question{border-left-color:#64dd17!important;}details.example{border-left-color:#651fff!important;}details.quote{border-left-color:#9e9e9e!important;}details.code{border-left-color:#a0a0a0!important;}details.note>summary,details.success>summary,details.failure>summary,details.warning>summary,details.info>summary,details.question>summary,details.example>summary,details.quote>summary,details.code>summary{margin:0 -1em 1em -1em;padding:.4em .6em .4em .6em;border-bottom:.05em solid;font-weight:700;display:block;outline:none;cursor:pointer;}details.note>summary{border-bottom-color:rgba(68,138,255,.1);background-color:rgba(68,138,255,.1);}details.success>summary{border-bottom-color:rgba(0,200,83,.1);background-color:rgba(0,200,83,.1);}details.failure>summary{border-bottom-color:rgba(255,82,82,.1);background-color:rgba(255,82,82,.1);}details.warning>summary{border-bottom-color:rgba(255,145,0,.1);background-color:rgba(255,145,0,.1);}details.info>summary{border-bottom-color:rgba(0,184,212,.1);background-color:rgba(0,184,212,.1);}details.question>summary{border-bottom-color:rgba(100,221,23,.1);background-color:rgba(100,221,23,.1);}details.example>summary{border-bottom-color:rgba(101,31,255,.1);background-color:rgba(101,31,255,.1);}details.quote>summary{border-bottom-color:rgba(158,158,158,.1);background-color:rgba(158,158,158,.1);}details.code>summary{border-bottom-color:rgba(160,160,160,.1);background-color:rgba(160,160,160,.1);}details.note:not([open])>summary,details.success:not([open])>summary,details.failure:not([open])>summary,details.warning:not([open])>summary,details.info:not([open])>summary,details.question:not([open])>summary,details.example:not([open])>summary,details.quote:not([open])>summary,details.code:not([open])>summary{border-bottom:0;margin-bottom:0;}details.note>summary>div.box-open-button,details.success>summary>div.box-open-button,details.failure>summary>div.box-open-button,details.warning>summary>div.box-open-button,details.info>summary>div.box-open-button,details.question>summary>div.box-open-button,details.example>summary>div.box-open-button,details.quote>summary>div.box-open-button,details.code>summary>div.box-open-button{float:right;}details.note>summary>i,details.success>summary>i,details.failure>summary>i,details.warning>summary>i,details.info>summary>i,details.question>summary>i,details.example>summary>i,details.quote>summary>i,details.code>summary>i,details.note>summary>div.box-open-button>i,details.success>summary>div.box-open-button>i,details.failure>summary>div.box-open-button>i,details.warning>summary>div.box-open-button>i,details.info>summary>div.box-open-button>i,details.question>summary>div.box-open-button>i,details.example>summary>div.box-open-button>i,details.quote>summary>div.box-open-button>i,details.code>summary>div.box-open-button>i{margin:0 .6125em 0 .6125em;}details.note>summary>i{color:#448aff;}details.success>summary>i{color:#00c853;}details.failure>summary>i{color:#ff5252;}details.warning>summary>i{color:#ff9100;}details.info>summary>i{color:#00b8d4;}details.question>summary>i{color:#64dd17;}details.example>summary>i{color:#651fff;}details.quote>summary>i{color:#9e9e9e;}details.code>summary>i{color:#a0a0a0;}details.note>summary>div.box-open-button>i,details.success>summary>div.box-open-button>i,details.failure>summary>div.box-open-button>i,details.warning>summary>div.box-open-button>i,details.info>summary>div.box-open-button>i,details.question>summary>div.box-open-button>i,details.example>summary>div.box-open-button>i,details.quote>summary>div.box-open-button>i,details.code>summary>div.box-open-button>i{color:rgba(0,0,0,.26);}details[open].note>summary>div.box-open-button>i,details[open].success>summary>div.box-open-button>i,details[open].failure>summary>div.box-open-button>i,details[open].warning>summary>div.box-open-button>i,details[open].info>summary>div.box-open-button>i,details[open].question>summary>div.box-open-button>i,details[open].example>summary>div.box-open-button>i,details[open].quote>summary>div.box-open-button>i,details[open].code>summary>div.box-open-button>i{transform:rotate(180deg);}</style>
-  <meta property="og:type" content="article">
-<meta property="og:title" content="脑子里并没有另一个人的记忆">
-<meta property="og:url" content="http://example.com/2023/01/15/%E8%84%91%E5%AD%90%E9%87%8C%E5%B9%B6%E6%B2%A1%E6%9C%89%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E8%AE%B0%E5%BF%86/index.html">
+  <meta name="description" content="博弈论，以及处理树上邻域的技巧。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="P8994 [北大集训 2021] 经典游戏">
+<meta property="og:url" content="http://example.com/2023/12/07/P8994-%E5%8C%97%E5%A4%A7%E9%9B%86%E8%AE%AD-2021-%E7%BB%8F%E5%85%B8%E6%B8%B8%E6%88%8F-1/index.html">
 <meta property="og:site_name" content="Live&#39;s Blog">
+<meta property="og:description" content="博弈论，以及处理树上邻域的技巧。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-01-15T11:05:51.000Z">
-<meta property="article:modified_time" content="2023-03-02T11:59:20.198Z">
+<meta property="article:published_time" content="2023-12-07T07:13:35.000Z">
+<meta property="article:modified_time" content="2023-12-07T07:53:33.825Z">
 <meta property="article:author" content="Live">
-<meta property="article:tag" content="闲话">
+<meta property="article:tag" content="题解">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2023/01/15/%E8%84%91%E5%AD%90%E9%87%8C%E5%B9%B6%E6%B2%A1%E6%9C%89%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E8%AE%B0%E5%BF%86/">
+<link rel="canonical" href="http://example.com/2023/12/07/P8994-%E5%8C%97%E5%A4%A7%E9%9B%86%E8%AE%AD-2021-%E7%BB%8F%E5%85%B8%E6%B8%B8%E6%88%8F-1/">
 
 
 <script id="page-configurations">
@@ -44,7 +46,7 @@
   };
 </script>
 
-  <title>脑子里并没有另一个人的记忆 | Live's Blog</title>
+  <title>P8994 [北大集训 2021] 经典游戏 | Live's Blog</title>
   
 
 
@@ -189,7 +191,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/15/%E8%84%91%E5%AD%90%E9%87%8C%E5%B9%B6%E6%B2%A1%E6%9C%89%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E8%AE%B0%E5%BF%86/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/07/P8994-%E5%8C%97%E5%A4%A7%E9%9B%86%E8%AE%AD-2021-%E7%BB%8F%E5%85%B8%E6%B8%B8%E6%88%8F-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -202,7 +204,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          脑子里并没有另一个人的记忆
+          P8994 [北大集训 2021] 经典游戏
         </h1>
 
         <div class="post-meta">
@@ -211,23 +213,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2023-01-15 19:05:51" itemprop="dateCreated datePublished" datetime="2023-01-15T19:05:51+08:00">2023-01-15</time>
+              <time title="创建时间：2023-12-07 15:13:35 / 修改时间：15:53:33" itemprop="dateCreated datePublished" datetime="2023-12-07T15:13:35+08:00">2023-12-07</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-02 19:59:20" itemprop="dateModified" datetime="2023-03-02T19:59:20+08:00">2023-03-02</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/" itemprop="url" rel="index"><span itemprop="name">新建文件夹</span></a>
+                  <a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a>
                 </span>
             </span>
 
@@ -237,7 +233,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>355</span>
+              <span>186</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -256,18 +252,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="18ffc29d707d3591fdf4c70f44b28d641a17f342fe9de0db2344df352626ee7f">ffc2a1a8d5dd2c8af5bcfcf7b828bee0cb524c044d024bc4843593b6a590981848eaae75129507fd7a1b3574b6c6c609c3ba37bbb90bd8dc46ead3468cc68a5ad8e99ced4f8e797217fdbf9ec8f60e730524708200cb811af10d56077d1fabd8ba4651e156fe4e179546ccafe37686fa151c2d54d68606b16715b1c27217ebf4fca4a762c5793bd96dbe88c80717eca13ae1df66429006e68c23303daf2548d557e56a6d60a9ff4cce568e1771db98bd677def74789a178eb9195b427743863e86a64ef866de7b63b4b63be6c4cfe3ff3e023865932cc8e2ee5d2212b5320ef526831af3723a73e036d58b9dcc9ece2f0be31a989814c362f5796f85af51d7339c5c61933d65639aa839431368b9b631113beb746c6d41acaec6f324d7264a47132438bf4959cf80348cdd958fab995828d06423a58acccc66f895bcc678322a0c67c7213208341b3a5cfa085ab1f2b0fd0f280f6b1e11e63100ac63664a19355a390e48b90ec747567a0b03d14dbf196ddc18b4c769a563afcb4c5e030c8c71a1bfd2c98d14e8229c4e7b686d9531320a047c48fdc13544808e3acf046d05fd3b78ceafd3f220d46c736866df9f9b3f8aace2eebe7dd78c43c3048cac205a1607d5dfea04e5144f789e552ecd605198e3a943f15f60c0eaf158f08a44e6c93e927a8e3c3515cada3b93984c7a6b005d872cb33098cf5cac20386d59ae215443bd730ca24e9176b472270635e105bc095a0cf767c73fe6c596b86d3431b410ac006e30d53b4b064d3fcb0e48655f5fc9d8c17609859b3780f065340e7741173f1d9d5451ac306ba4ba43aa687d278ec3c9f3427460fa965b5ed28ce7a3f5a7c74b9aea66f6faa08e7ebd84a028dc73af47c98268cf7985820270efc469760cccacad9b74c6b665f263b0b9cc77163b6e42dba24d68e789867763ddaf53a05df685b0c355c63260cdb97961e7d72532cb436b75a2179185f07106452c2422526c760eb516908f49a6dca8c6f7ad0e599f304520fc245472ac652fcfbca2866c9fbb3e3ee9f56b49b715c79ad3f7ae8e89c97bf7dbc0f9aaed86179b1e6af4abde3a2852dcc897e6787a8f04f88a5e1dd3a25972b8ad211e37ae24d087a3bab769622e1e8337c03329e08504046db2eccd2568d53c3c4fc13a65531ddb476d85b7ff25dd0266f555518f4c089b70b27d6bcbc1fbda5599506d61f69b2b40d43013ca626a3f75767ae98d5773d5804e89de12644a3325c140cc5e33b16e1bec67b76c6501f2b8354e80ae77777526c6bb6f32782fdef4dab57094bb2ab1bab12119a8a8e5373978f01c2d048accfcc58c334d3f0888d368e08e741941a9b76973e3ed0c3e771cdd7ed027a1d52d66ae8fad43fa5796ef5758505fabbb40f297023d1d9c786db9229c103e056f47a9f0a8ba70ef71770e8cd7be2fa07f1c4e35834cac4c5a41a885c089c85cb8214c12721a641e75cb0606dc08d5bab954978740b0f4da15a6a7c4e605a92dc8cae4cec04e9f762dd90c608f8298348b6c06805febaf51eed3aa1a557412f59e6aad936b1d9159257775079a624bc20edb6cc20e35ac38ea7de1f335adbd74c823b1c79295</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">I am.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+        <p>博弈论，以及处理树上邻域的技巧。</p>
+<span id="more"></span>
+<p>首先容易发现一个点的 SG 函数是其子树的最大深度，不妨设为 $f_i$，并且对于每个棋子都是一个独立的游戏，那么总的 SG 函数就是所有子游戏的异或和，设 $c_i$ 表示以 $i$ 作为根时，$c_x=\oplus[a_i\equiv 1\pmod 2] f_i$。于是得到放一个棋子的充要条件 $\max_i f_i&lt;c_x$。</p>
+
     </div>
 
     
@@ -276,7 +264,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E9%97%B2%E8%AF%9D/" rel="tag"># 闲话</a>
+              <a href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag"># 题解</a>
           </div>
 
         
@@ -285,13 +273,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/01/12/P4841-%E9%9B%86%E8%AE%AD%E9%98%9F%E4%BD%9C%E4%B8%9A2013-%E5%9F%8E%E5%B8%82%E8%A7%84%E5%88%92/" rel="prev" title="P4841 [集训队作业2013]城市规划">
-      <i class="fa fa-chevron-left"></i> P4841 [集训队作业2013]城市规划
+    <a href="/2023/12/05/%E6%97%A0%E6%B3%95%E8%AF%B4%E5%86%8D%E8%A7%81/" rel="prev" title="无法说再见">
+      <i class="fa fa-chevron-left"></i> 无法说再见
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2023/01/26/CF1616G-Just-Add-an-Edge/" rel="next" title="CF1616G Just Add an Edge">
-      CF1616G Just Add an Edge <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -562,7 +547,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'GitalkStorage',
       owner       : 'KevinLive',
       admin       : ['KevinLive'],
-      id          : '5f1cec7106dd73af8058364c8254458a',
+      id          : 'e8070f9fa856d87376e729d1d90fe095',
         language: 'zh-CN',
       distractionFreeMode: true
     });
