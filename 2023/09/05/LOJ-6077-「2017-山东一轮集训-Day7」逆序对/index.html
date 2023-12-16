@@ -28,7 +28,7 @@
 <meta property="og:description" content="生成函数 + DP ，或者容斥，一道好题。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-09-05T07:31:40.000Z">
-<meta property="article:modified_time" content="2023-09-07T08:50:21.842Z">
+<meta property="article:modified_time" content="2023-12-15T11:46:04.849Z">
 <meta property="article:author" content="Live">
 <meta property="article:tag" content="题解">
 <meta property="article:tag" content="DP">
@@ -224,7 +224,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-09-07 16:50:21" itemprop="dateModified" datetime="2023-09-07T16:50:21+08:00">2023-09-07</time>
+                <time title="修改时间：2023-12-15 19:46:04" itemprop="dateModified" datetime="2023-12-15T19:46:04+08:00">2023-12-15</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -263,6 +263,7 @@
       
         <p>生成函数 + DP ，或者容斥，一道好题。</p>
 <span id="more"></span>
+<p>下面皆视 $n,k$ 同阶。</p>
 <h3 id="生成函数-mathcal-O-k-sqrt-k"><a href="#生成函数-mathcal-O-k-sqrt-k" class="headerlink" title="生成函数 $\mathcal O(k\sqrt{k})$"></a>生成函数 $\mathcal O(k\sqrt{k})$</h3><p>首先根据题意，得到答案得生成函数：</p>
 <script type="math/tex; mode=display">
 F(x)=\prod_{i=1}^n(\sum_{j=0}^{i-1} x^j)=\prod_{i=1}^n\frac{(1-x^i)}{1-x}
@@ -288,7 +289,8 @@ F(x)=\prod_{i=1}^n(\sum_{j=0}^{i-1} x^j)=\prod_{i=1}^n\frac{(1-x^i)}{1-x}
 <script type="math/tex; mode=display">
 F(x)=\frac{1}{(1-x)^n}\prod_{i=1}^n(1-x^i)</script><p>前一部分还是一样，我们有 $\displaystyle \frac{1}{(1-x)^n}=\sum_{i\ge 0}\binom{n+i-1}{i}x^i$。考虑后一部分，利用 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P4389">P4389 付公主的背包</a> 一样的技巧，先对其取 $\ln$ 将其转化为加法。我们有下面的式子：</p>
 <script type="math/tex; mode=display">
-\ln (1-x^k)=-\sum_{i>0}\frac{1}{i}x^{ik}</script><p>所以得到：</p>
+\ln (1-x^k)=-\sum_{i>0}\frac{1}{i}x^{ik}</script><p>这个式子可以通过泰勒展开得到，当然也可以通过对两边求导得到。</p>
+<p>所以我们得到：</p>
 <script type="math/tex; mode=display">
 \ln(\prod_{i=1}^n{(1-x^i)})=-\sum_{i=1}^n \sum_{j>0}\frac{1}{j}x^{ij}</script><p>右边暴力 $\mathcal O(n\ln n)$ 枚举，再做一次多项式 $\exp $ 即可，最后乘上 $\displaystyle \frac{1}{(1-x)^n}=\sum_{i\ge 0}\binom{n+i-1}{i}x^i$ 即可。时间复杂度为 $\mathcal O(n\log n)$。需要用到任意模数 NTT。</p>
 
@@ -394,7 +396,7 @@ F(x)=\frac{1}{(1-x)^n}\prod_{i=1}^n(1-x^i)</script><p>前一部分还是一样�
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">134</span>
+          <span class="site-state-item-count">147</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -407,7 +409,7 @@ F(x)=\frac{1}{(1-x)^n}\prod_{i=1}^n(1-x^i)</script><p>前一部分还是一样�
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">80</span>
+        <span class="site-state-item-count">82</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -461,12 +463,12 @@ F(x)=\frac{1}{(1-x)^n}\prod_{i=1}^n(1-x^i)</script><p>前一部分还是一样�
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">457k</span>
+    <span title="站点总字数">489k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:56</span>
+    <span title="站点阅读时长">7:24</span>
 </div>
 
         
