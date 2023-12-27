@@ -20,14 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
   <style type="text/css">details.note,details.success,details.failure,details.warning,details.info,details.question,details.example,details.quote,details.code{display:block!important;padding-top:0!important;box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2)!important;position:relative!important;margin:1.5625em 0!important;padding:0 1em!important;border-left:.2em solid!important;border-radius:.1em!important;font-size:.9em!important;overflow:auto!important;}details.note:not([open]),details.success:not([open]),details.failure:not([open]),details.warning:not([open]),details.info:not([open]),details.question:not([open]),details.example:not([open]),details.quote:not([open]),details.code:not([open]){padding-bottom:0!important;}details.note{border-left-color:#448aff!important;}details.success{border-left-color:#00c853!important;}details.failure{border-left-color:#ff5252!important;}details.warning{border-left-color:#ff9100!important;}details.info{border-left-color:#00b8d4!important;}details.question{border-left-color:#64dd17!important;}details.example{border-left-color:#651fff!important;}details.quote{border-left-color:#9e9e9e!important;}details.code{border-left-color:#a0a0a0!important;}details.note>summary,details.success>summary,details.failure>summary,details.warning>summary,details.info>summary,details.question>summary,details.example>summary,details.quote>summary,details.code>summary{margin:0 -1em 1em -1em;padding:.4em .6em .4em .6em;border-bottom:.05em solid;font-weight:700;display:block;outline:none;cursor:pointer;}details.note>summary{border-bottom-color:rgba(68,138,255,.1);background-color:rgba(68,138,255,.1);}details.success>summary{border-bottom-color:rgba(0,200,83,.1);background-color:rgba(0,200,83,.1);}details.failure>summary{border-bottom-color:rgba(255,82,82,.1);background-color:rgba(255,82,82,.1);}details.warning>summary{border-bottom-color:rgba(255,145,0,.1);background-color:rgba(255,145,0,.1);}details.info>summary{border-bottom-color:rgba(0,184,212,.1);background-color:rgba(0,184,212,.1);}details.question>summary{border-bottom-color:rgba(100,221,23,.1);background-color:rgba(100,221,23,.1);}details.example>summary{border-bottom-color:rgba(101,31,255,.1);background-color:rgba(101,31,255,.1);}details.quote>summary{border-bottom-color:rgba(158,158,158,.1);background-color:rgba(158,158,158,.1);}details.code>summary{border-bottom-color:rgba(160,160,160,.1);background-color:rgba(160,160,160,.1);}details.note:not([open])>summary,details.success:not([open])>summary,details.failure:not([open])>summary,details.warning:not([open])>summary,details.info:not([open])>summary,details.question:not([open])>summary,details.example:not([open])>summary,details.quote:not([open])>summary,details.code:not([open])>summary{border-bottom:0;margin-bottom:0;}details.note>summary>div.box-open-button,details.success>summary>div.box-open-button,details.failure>summary>div.box-open-button,details.warning>summary>div.box-open-button,details.info>summary>div.box-open-button,details.question>summary>div.box-open-button,details.example>summary>div.box-open-button,details.quote>summary>div.box-open-button,details.code>summary>div.box-open-button{float:right;}details.note>summary>i,details.success>summary>i,details.failure>summary>i,details.warning>summary>i,details.info>summary>i,details.question>summary>i,details.example>summary>i,details.quote>summary>i,details.code>summary>i,details.note>summary>div.box-open-button>i,details.success>summary>div.box-open-button>i,details.failure>summary>div.box-open-button>i,details.warning>summary>div.box-open-button>i,details.info>summary>div.box-open-button>i,details.question>summary>div.box-open-button>i,details.example>summary>div.box-open-button>i,details.quote>summary>div.box-open-button>i,details.code>summary>div.box-open-button>i{margin:0 .6125em 0 .6125em;}details.note>summary>i{color:#448aff;}details.success>summary>i{color:#00c853;}details.failure>summary>i{color:#ff5252;}details.warning>summary>i{color:#ff9100;}details.info>summary>i{color:#00b8d4;}details.question>summary>i{color:#64dd17;}details.example>summary>i{color:#651fff;}details.quote>summary>i{color:#9e9e9e;}details.code>summary>i{color:#a0a0a0;}details.note>summary>div.box-open-button>i,details.success>summary>div.box-open-button>i,details.failure>summary>div.box-open-button>i,details.warning>summary>div.box-open-button>i,details.info>summary>div.box-open-button>i,details.question>summary>div.box-open-button>i,details.example>summary>div.box-open-button>i,details.quote>summary>div.box-open-button>i,details.code>summary>div.box-open-button>i{color:rgba(0,0,0,.26);}details[open].note>summary>div.box-open-button>i,details[open].success>summary>div.box-open-button>i,details[open].failure>summary>div.box-open-button>i,details[open].warning>summary>div.box-open-button>i,details[open].info>summary>div.box-open-button>i,details[open].question>summary>div.box-open-button>i,details[open].example>summary>div.box-open-button>i,details[open].quote>summary>div.box-open-button>i,details[open].code>summary>div.box-open-button>i{transform:rotate(180deg);}</style>
-  <meta property="og:type" content="article">
+  <meta name="description" content="处理回文串的利器。">
+<meta property="og:type" content="article">
 <meta property="og:title" content="回文自动机">
 <meta property="og:url" content="http://example.com/2023/12/13/%E5%9B%9E%E6%96%87%E8%87%AA%E5%8A%A8%E6%9C%BA/index.html">
-<meta property="og:site_name" content="Live&#39;s Blog">
+<meta property="og:site_name" content="Liveddd&#39;s Blog">
+<meta property="og:description" content="处理回文串的利器。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-13T07:11:09.000Z">
-<meta property="article:modified_time" content="2023-12-13T07:11:09.162Z">
-<meta property="article:author" content="Live">
+<meta property="article:modified_time" content="2023-12-22T00:26:04.486Z">
+<meta property="article:author" content="Liveddd">
+<meta property="article:tag" content="字符串">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="回文自动机">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://example.com/2023/12/13/%E5%9B%9E%E6%96%87%E8%87%AA%E5%8A%A8%E6%9C%BA/">
@@ -43,7 +48,7 @@
   };
 </script>
 
-  <title>回文自动机 | Live's Blog</title>
+  <title>回文自动机 | Liveddd's Blog</title>
   
 
 
@@ -94,10 +99,10 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Live's Blog</h1>
+      <h1 class="site-title">Liveddd's Blog</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">I am.</p>
+      <p class="site-subtitle" itemprop="description">愛にできることはまだあるかい</p>
   </div>
 
   <div class="site-nav-right">
@@ -192,12 +197,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Live">
+      <meta itemprop="name" content="Liveddd">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Live's Blog">
+      <meta itemprop="name" content="Liveddd's Blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -213,21 +218,44 @@
 
               <time title="创建时间：2023-12-13 15:11:09" itemprop="dateCreated datePublished" datetime="2023-12-13T15:11:09+08:00">2023-12-13</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-12-22 08:26:04" itemprop="dateModified" datetime="2023-12-22T08:26:04+08:00">2023-12-22</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a>
+                </span>
+            </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>0</span>
+              <span>6.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>15 分钟</span>
             </span>
 
         </div>
@@ -239,7 +267,57 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <p>处理回文串的利器。</p>
+<span id="more"></span>
+<h2 id="0-结构"><a href="#0-结构" class="headerlink" title="0.结构"></a>0.结构</h2><p>回文自动机 PAM 和其它自动机类似。回文自动机包含一个串的所有回文子串。回文树也是由转移边 fail 指针和后缀链接（fail 指针）组成，每个节点都可以代表一个回文子串。转移边与节点形成回文树。</p>
+<p>回文串长度分为奇数和偶数，我们显然应该分开处理。一种方法是尝试按照 Manacher 在字符之间插入分隔符，将偶数回文串转化为奇数回文串；另一种更好的方法是我们直接建两棵回文树，也就是建两个根，一个奇根一个偶根。</p>
+<h2 id="1-构造"><a href="#1-构造" class="headerlink" title="1.构造"></a>1.构造</h2><p>相对于后缀自动机简单了很多。首先是两个初始状态，也就是我们上面提到的奇根和偶根，分别代表长度为 $-1$ 和 $0$ 的字符串。偶根的 fail 指针指向奇根，奇根不可能失配，所以不关心奇根的 fail 指针。</p>
+<p>过程中，类似后缀自动机，我们尝试增量构造。考虑已经构造完前 $p-1$ 个字符的回文自动机之后，我们从上一个字符（也就是 $p-1$）对应的结尾的最长回文子串对应的节点开始，不断沿 fail 指针移动，直到 $s_{p-len-1}=s_{p}$。设此时移动到 $a$。此时相当于找到一个回文串，没有这个节点，就需要新建。</p>
+<p>求该节点的 fail 指针也是同理，从 $a$ 开始继续跳，直到再次满足 $s_{p-len-1}=s_{p}$，也就是最长回文后缀。这个节点一定存在（考虑回文的性质）。</p>
+<p>容易知道，整个过程时间复杂度为 $\mathcal O(n)$。</p>
+<h3 id="一些别的理解："><a href="#一些别的理解：" class="headerlink" title="一些别的理解："></a>一些别的理解：</h3><p>对于一个回文串 $s$，将其长度为 $\lceil\frac{|s|}{2}\rceil$ 的后缀称为其半串。回文树可以看作是所有回文子串对应的半串的 Trie（但对长度为奇数和偶数的回文串有特殊的标识分开），于是我们可以构造它的 ACAM。这样构造出的自动机结构称为回文自动机，类似可以定义失配指针，失配树。</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5496">P5496 【模板】回文自动机（PAM）</a></p>
+ <details class="success"><summary><i class="fa fa-check fa-fw"></i>Code<div class="box-open-button"><i class="fa fa-chevron-down fa-fw"></i></div></summary>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll=<span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">5e5</span>+<span class="number">10</span>,C=<span class="number">26</span>+<span class="number">5</span>;</span><br><span class="line"><span class="keyword">namespace</span> PAM</span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> n,tot;</span><br><span class="line">    <span class="type">char</span> s[N];</span><br><span class="line">    <span class="type">int</span> fail[N],len[N],tr[N][C];</span><br><span class="line">    <span class="type">int</span> cnt[N];</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">newnode</span><span class="params">(<span class="type">int</span> l)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        tot++;</span><br><span class="line">        <span class="built_in">memset</span>(tr[tot],<span class="number">0</span>,<span class="built_in">sizeof</span>(tr[tot]));</span><br><span class="line">        len[tot]=l;</span><br><span class="line">        fail[tot]=cnt[tot]=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> tot;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getfail</span><span class="params">(<span class="type">int</span> pos,<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(s[pos-len[x]<span class="number">-1</span>]!=s[pos])x=fail[x];</span><br><span class="line">        <span class="keyword">return</span> x;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">build</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        tot=<span class="number">-1</span>;</span><br><span class="line">        s[<span class="number">0</span>]=<span class="string">&#x27;$&#x27;</span>;</span><br><span class="line">        fail[<span class="built_in">newnode</span>(<span class="number">0</span>)]=<span class="built_in">newnode</span>(<span class="number">-1</span>);</span><br><span class="line">        n=<span class="built_in">strlen</span>(s+<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>,last=<span class="number">0</span>;i&lt;=n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            s[i]=(s[i]-<span class="string">&#x27;a&#x27;</span>+cnt[last])%<span class="number">26</span>+<span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="type">int</span> now=<span class="built_in">getfail</span>(i,last),c=s[i]-<span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span>(!tr[now][c])</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="type">int</span> x=<span class="built_in">newnode</span>(len[now]+<span class="number">2</span>);</span><br><span class="line">                fail[x]=tr[<span class="built_in">getfail</span>(i,fail[now])][c];</span><br><span class="line">                tr[now][c]=x;</span><br><span class="line">            &#125;</span><br><span class="line">            last=tr[now][c];</span><br><span class="line">            cnt[last]=cnt[fail[last]]+<span class="number">1</span>;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,cnt[last]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,PAM::s+<span class="number">1</span>);</span><br><span class="line">    PAM::<span class="built_in">build</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</details>
+<h2 id="2-应用"><a href="#2-应用" class="headerlink" title="2.应用"></a>2.应用</h2><h3 id="2-1-本质不同回文子串个数"><a href="#2-1-本质不同回文子串个数" class="headerlink" title="2.1 本质不同回文子串个数"></a>2.1 本质不同回文子串个数</h3><p>由线性状态数的证明，容易知道一个串的本质不同回文子串个数等于回文树的状态数（排除奇根和偶根两个状态）。</p>
+<h3 id="2-2-回文子串出现次数"><a href="#2-2-回文子串出现次数" class="headerlink" title="2.2 回文子串出现次数"></a>2.2 回文子串出现次数</h3><p>建出回文树，使用类似后缀自动机统计出现次数的方法。</p>
+<p>由于回文树的构造过程中，节点本身就是按照拓扑序插入，因此只需要逆序枚举所有状态，将当前状态的出现次数加到其 fail 指针对应状态的出现次数上即可。</p>
+<p>例题：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3649">P3649 [APIO2014] 回文串</a>。</p>
+ <details class="success"><summary><i class="fa fa-check fa-fw"></i>Code<div class="box-open-button"><i class="fa fa-chevron-down fa-fw"></i></div></summary>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll=<span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">3e5</span>+<span class="number">10</span>,C=<span class="number">26</span>+<span class="number">5</span>;</span><br><span class="line"><span class="keyword">namespace</span> PAM</span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> n,tot;</span><br><span class="line">    <span class="type">char</span> s[N];</span><br><span class="line">    <span class="type">int</span> fail[N],len[N],tr[N][C];</span><br><span class="line">    <span class="type">int</span> cnt[N];</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">newnode</span><span class="params">(<span class="type">int</span> l)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        tot++;</span><br><span class="line">        <span class="built_in">memset</span>(tr[tot],<span class="number">0</span>,<span class="built_in">sizeof</span>(tr[tot]));</span><br><span class="line">        len[tot]=l;</span><br><span class="line">        fail[tot]=cnt[tot]=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> tot;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getfail</span><span class="params">(<span class="type">int</span> pos,<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(s[pos-len[x]<span class="number">-1</span>]!=s[pos])x=fail[x];</span><br><span class="line">        <span class="keyword">return</span> x;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">build</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        tot=<span class="number">-1</span>;</span><br><span class="line">        s[<span class="number">0</span>]=<span class="string">&#x27;$&#x27;</span>;</span><br><span class="line">        fail[<span class="built_in">newnode</span>(<span class="number">0</span>)]=<span class="built_in">newnode</span>(<span class="number">-1</span>);</span><br><span class="line"></span><br><span class="line">        n=<span class="built_in">strlen</span>(s+<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>,last=<span class="number">0</span>;i&lt;=n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> now=<span class="built_in">getfail</span>(i,last),c=s[i]-<span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span>(!tr[now][c])</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="type">int</span> x=<span class="built_in">newnode</span>(len[now]+<span class="number">2</span>);</span><br><span class="line">                fail[x]=tr[<span class="built_in">getfail</span>(i,fail[now])][c];</span><br><span class="line">                tr[now][c]=x;</span><br><span class="line">            &#125;</span><br><span class="line">            last=tr[now][c];</span><br><span class="line">            cnt[last]++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">ll <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        ll ans=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=tot;~i;i--)ans=<span class="built_in">max</span>(ans,<span class="number">1ll</span>*len[i]*cnt[i]),cnt[fail[i]]+=cnt[i];</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,PAM::s+<span class="number">1</span>);</span><br><span class="line">    PAM::<span class="built_in">build</span>();</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>,PAM::<span class="built_in">solve</span>());</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</details>
+<h3 id="2-3-最小回文划分"><a href="#2-3-最小回文划分" class="headerlink" title="2.3 最小回文划分"></a>2.3 最小回文划分</h3><blockquote>
+<p>给定一个字符串 $s(1\le |s| \le 10^5)$，求最小的 $k$，使得存在 $s_1,s_2,\dots,s_k$，满足 $s_i(1\le i \le k)$ 均为回文串，且 $s_1,s_2, \dots ,s_k$ 依次连接后得到的字符串等于 $s$。</p>
+</blockquote>
+<p>考虑暴力做法，我们建出回文自动机以找出所有回文串。设计状态 $f_i$ 表示 $s[1,i]$ 最少多少个回文串划分，容易得到转移 $f_i=\min f_j+1$，其中 $s[j+1,i]$ 为回文串。这样时间复杂度是 $\mathcal O(n^2)$。</p>
+<p>接下来我们介绍一些引理，并且对上述暴力算法进行优化：</p>
+<h4 id="引理一"><a href="#引理一" class="headerlink" title="引理一"></a>引理一</h4><p>$t$ 是回文串 $s$ 的后缀，$t$ 是 $s$ 的 border 当且仅当 $t$ 是回文串。</p>
+<h4 id="引理二"><a href="#引理二" class="headerlink" title="引理二"></a>引理二</h4><p>$t$ 是串 $s$ 的 border ($|s|\le 2|t|$)，$s$ 是回文串当且仅当 $t$ 是回文串。</p>
+<h4 id="引理三"><a href="#引理三" class="headerlink" title="引理三"></a>引理三</h4><p>$t$ 是回文串 $s$ 的 border，则 $|s|-|t|$ 是 $s$ 的周期，$|s|-|t|$ 为 $s$ 的最小周期，当且仅当 $t$ 是 $s$ 的最长回文真后缀。</p>
+<h4 id="引理四"><a href="#引理四" class="headerlink" title="引理四"></a>引理四</h4><p>$x$ 是一个回文串，$y$ 是 $x$ 的最长回文真后缀，$z$ 是 $y$ 的最长回文真后缀。令 $u,v$ 分别为满足 $x=uy,y=vz$ 的字符串，则有下面三条性质</p>
+<ol>
+<li><p>$|u| \ge |v|$；</p>
+</li>
+<li><p>如果 $|u| &gt; |v|$，那么 $|u| &gt; |z|$；</p>
+</li>
+<li><p>如果 $|u| = |v|$，那么 $u=v$。</p>
+</li>
+</ol>
+<h4 id="推论"><a href="#推论" class="headerlink" title="推论"></a>推论</h4><p>$s$ 的所有回文后缀按照长度排序后，可以划分成 $\log |s|$ 段等差数列。</p>
+<p>更一般地，这个可以通过 Border 理论得到。</p>
+<h4 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h4><p>我们尝试利用等差数列的性质，将相同等差数列中的答案进行压缩。</p>
+<p>我们寻找所有回文串的过程就是不断地跳 fail 指针，过程中将依次经过 $\log n$ 个等差数列。我们维护该等差数列的中 Border 对应位置的答案的 $\min$。加上当前字符之后，若 $x$ 与 $fail[x]$ 在同一个等差数列中，那么相当于对应的等差数列向右移动 公差 个位置 。唯一比 $fail[x]$ 对应的维护的 $\min$ 多出来的位置就是原来 等差数列的首项 再加上 公差，我们把这个位置算上即可。过程中我们只需要一直跳首项即可，最多跳 $\log n$ 次。时间复杂度为 $\mathcal O(n\log n)$。</p>
+<p>例题：<a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/932/G">CF932G Palindrome Partition</a></p>
+<p>考虑将原字符串进行按照 $s_1 s_n s_2 s_{n-1}\cdots s_{\frac{n}{2}}s_{\frac{n}{2}+1}$ 拼接，这样就转化为，将其划分为若干个偶回文串的方案数。于是跟上面几乎一样，不过我们只在偶数位置计数就好了。</p>
+<p><del>可以说是因为这一道题去学了回文自动机。</del></p>
+ <details class="success"><summary><i class="fa fa-check fa-fw"></i>Code<div class="box-open-button"><i class="fa fa-chevron-down fa-fw"></i></div></summary>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll=<span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">1e6</span>+<span class="number">10</span>,C=<span class="number">26</span>+<span class="number">5</span>,mod=<span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">upd</span><span class="params">(<span class="type">int</span> &amp;x,<span class="type">int</span> y)</span></span>&#123;x+=y,x=x&gt;=mod?x-mod:x;&#125;</span><br><span class="line"><span class="keyword">namespace</span> PAM</span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> n,tot;</span><br><span class="line">    <span class="type">char</span> s[N];</span><br><span class="line">    <span class="type">int</span> fail[N],len[N],tr[N][C];</span><br><span class="line">    <span class="type">int</span> slink[N],diff[N];</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> f[N],g[N];</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">newnode</span><span class="params">(<span class="type">int</span> l)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        tot++;</span><br><span class="line">        <span class="built_in">memset</span>(tr[tot],<span class="number">0</span>,<span class="built_in">sizeof</span>(tr[tot]));</span><br><span class="line">        len[tot]=l;</span><br><span class="line">        fail[tot]=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> tot;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getfail</span><span class="params">(<span class="type">int</span> pos,<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(s[pos-len[x]<span class="number">-1</span>]!=s[pos])x=fail[x];</span><br><span class="line">        <span class="keyword">return</span> x;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">build</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        tot=<span class="number">-1</span>;</span><br><span class="line">        s[<span class="number">0</span>]=<span class="string">&#x27;$&#x27;</span>;</span><br><span class="line">        fail[<span class="built_in">newnode</span>(<span class="number">0</span>)]=<span class="built_in">newnode</span>(<span class="number">-1</span>);</span><br><span class="line">        n=<span class="built_in">strlen</span>(s+<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        f[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>,last=<span class="number">0</span>;i&lt;=n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> now=<span class="built_in">getfail</span>(i,last),c=s[i]-<span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">            <span class="keyword">if</span>(!tr[now][c])</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="type">int</span> x=<span class="built_in">newnode</span>(len[now]+<span class="number">2</span>);</span><br><span class="line">                fail[x]=tr[<span class="built_in">getfail</span>(i,fail[now])][c];</span><br><span class="line">                tr[now][c]=x;</span><br><span class="line"></span><br><span class="line">                diff[x]=len[x]-len[fail[x]];</span><br><span class="line">                <span class="keyword">if</span>(diff[x]==diff[fail[x]])slink[x]=slink[fail[x]];</span><br><span class="line">                <span class="keyword">else</span> slink[x]=fail[x];</span><br><span class="line">            &#125;</span><br><span class="line">            last=tr[now][c];</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> x=last;x&gt;<span class="number">1</span>;x=slink[x])</span><br><span class="line">            &#123;</span><br><span class="line">                g[x]=f[i-len[slink[x]]-diff[x]];</span><br><span class="line">                <span class="keyword">if</span>(diff[x]==diff[fail[x]])<span class="built_in">upd</span>(g[x],g[fail[x]]);</span><br><span class="line">                <span class="keyword">if</span>(i&amp;<span class="number">1</span>)<span class="keyword">continue</span>;</span><br><span class="line">                <span class="built_in">upd</span>(f[i],g[x]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">char</span> s[N];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,s+<span class="number">1</span>);</span><br><span class="line">    n=<span class="built_in">strlen</span>(s+<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">if</span>(n&amp;<span class="number">1</span>)<span class="keyword">return</span> <span class="built_in">puts</span>(<span class="string">&quot;0&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>,tot=<span class="number">0</span>;i&lt;=(n&gt;&gt;<span class="number">1</span>);i++)PAM::s[++tot]=s[i],PAM::s[++tot]=s[n-i+<span class="number">1</span>];</span><br><span class="line">    PAM::<span class="built_in">build</span>();</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,PAM::f[n]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</details>
+
     </div>
 
     
@@ -247,6 +325,11 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag"># 字符串</a>
+              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
+              <a href="/tags/%E5%9B%9E%E6%96%87%E8%87%AA%E5%8A%A8%E6%9C%BA/" rel="tag"># 回文自动机</a>
+          </div>
 
         
 
@@ -320,14 +403,15 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-%E7%BB%93%E6%9E%84"><span class="nav-text">0.结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%9E%84%E9%80%A0"><span class="nav-text">1.构造</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E5%88%AB%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9A"><span class="nav-text">一些别的理解：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%BA%94%E7%94%A8"><span class="nav-text">2.应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E6%9C%AC%E8%B4%A8%E4%B8%8D%E5%90%8C%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2%E4%B8%AA%E6%95%B0"><span class="nav-text">2.1 本质不同回文子串个数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0"><span class="nav-text">2.2 回文子串出现次数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E6%9C%80%E5%B0%8F%E5%9B%9E%E6%96%87%E5%88%92%E5%88%86"><span class="nav-text">2.3 最小回文划分</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E7%90%86%E4%B8%80"><span class="nav-text">引理一</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E7%90%86%E4%BA%8C"><span class="nav-text">引理二</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E7%90%86%E4%B8%89"><span class="nav-text">引理三</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E7%90%86%E5%9B%9B"><span class="nav-text">引理四</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%A8%E8%AE%BA"><span class="nav-text">推论</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%98%E5%8C%96"><span class="nav-text">优化</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Live"
+    <img class="site-author-image" itemprop="image" alt="Liveddd"
       src="/images/avatar.gif">
-  <p class="site-author-name" itemprop="name">Live</p>
+  <p class="site-author-name" itemprop="name">Liveddd</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -335,7 +419,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">147</span>
+          <span class="site-state-item-count">155</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -348,7 +432,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">82</span>
+        <span class="site-state-item-count">85</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -397,20 +481,40 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Live</span>
+  <span class="author" itemprop="copyrightHolder">Liveddd</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">489k</span>
+    <span title="站点总字数">526k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:24</span>
+    <span title="站点阅读时长">19:29</span>
 </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 

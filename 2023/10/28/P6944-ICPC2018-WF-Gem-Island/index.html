@@ -24,12 +24,12 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="P6944 [ICPC2018 WF] Gem Island">
 <meta property="og:url" content="http://example.com/2023/10/28/P6944-ICPC2018-WF-Gem-Island/index.html">
-<meta property="og:site_name" content="Live&#39;s Blog">
+<meta property="og:site_name" content="Liveddd&#39;s Blog">
 <meta property="og:description" content="不错的 DP 题目，中间用 二项式反演 或者 min-max 容斥处理。加强版做法也比较厉害。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-10-28T08:07:59.000Z">
-<meta property="article:modified_time" content="2023-11-03T06:47:53.310Z">
-<meta property="article:author" content="Live">
+<meta property="article:modified_time" content="2023-12-20T00:33:46.551Z">
+<meta property="article:author" content="Liveddd">
 <meta property="article:tag" content="题解">
 <meta property="article:tag" content="DP">
 <meta name="twitter:card" content="summary">
@@ -47,7 +47,7 @@
   };
 </script>
 
-  <title>P6944 [ICPC2018 WF] Gem Island | Live's Blog</title>
+  <title>P6944 [ICPC2018 WF] Gem Island | Liveddd's Blog</title>
   
 
 
@@ -98,10 +98,10 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Live's Blog</h1>
+      <h1 class="site-title">Liveddd's Blog</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">I am.</p>
+      <p class="site-subtitle" itemprop="description">愛にできることはまだあるかい</p>
   </div>
 
   <div class="site-nav-right">
@@ -196,12 +196,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Live">
+      <meta itemprop="name" content="Liveddd">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Live's Blog">
+      <meta itemprop="name" content="Liveddd's Blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -222,7 +222,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-11-03 14:47:53" itemprop="dateModified" datetime="2023-11-03T14:47:53+08:00">2023-11-03</time>
+                <time title="修改时间：2023-12-20 08:33:46" itemprop="dateModified" datetime="2023-12-20T08:33:46+08:00">2023-12-20</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -234,7 +234,14 @@
                 </span>
             </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -247,7 +254,7 @@
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>7 分钟</span>
+              <span>18 分钟</span>
             </span>
 
         </div>
@@ -273,7 +280,7 @@
 
 </details>
 <p>能不能再给力一点？</p>
-<h2 id="加强版-n-d-le-1-5-times-10-7-r-le-n-p-998244353"><a href="#加强版-n-d-le-1-5-times-10-7-r-le-n-p-998244353" class="headerlink" title="加强版  $(n,d\le 1.5\times 10^7,r\le n ,p=998244353)$"></a><a target="_blank" rel="noopener" href="https://loj.ac/p/3405">加强版</a>  $(n,d\le 1.5\times 10^7,r\le n ,p=998244353)$</h2><p>有两个 DP 数组不方便考虑，我们尝试到值上进行考虑。将 $c_i$ 的贡献拆成 $\sum_{j=1}^d[c_i\ge j]$。我们设 $f(i,j)$ 表示恰好有 $i$ 个数大于等于 $j$ 的方案书。最终答案为 $\displaystyle \sum_{i=1}^n \sum_{j=1}^d \min(i,d) f(i,j)$。</p>
+<h2 id="加强版-n-d-le-1-5-times-10-7-r-le-n-p-998244353"><a href="#加强版-n-d-le-1-5-times-10-7-r-le-n-p-998244353" class="headerlink" title="加强版  $(n,d\le 1.5\times 10^7,r\le n ,p=998244353)$"></a><a target="_blank" rel="noopener" href="https://loj.ac/p/3405">加强版</a>  $(n,d\le 1.5\times 10^7,r\le n ,p=998244353)$</h2><p>有两个 DP 数组不方便考虑，我们尝试到值上进行考虑。将 $c_i$ 的贡献拆成 $\sum_{j=1}^d[c_i\ge j]$。我们设 $f(i,j)$ 表示恰好有 $i$ 个数大于等于 $j$ 的方案书。最终答案为 $\displaystyle \sum_{i=1}^n \sum_{j=1}^d \min(i,r) f(i,j)$。</p>
 <p>注意到“恰好”的限制，容易想到容斥。直接钦定 有 $i$ 个数大于等于 $j$，设为 $g(i,j)$，利用隔板法得到 $\displaystyle g(i,j)=\binom{n}{i}\binom{d-ij+n-1}{n-1}$。于是根据 $\displaystyle g(i,j)=\sum_{k=i}^n\binom{k}{i}f(k,j)$，直接二项式反演得到：</p>
 <script type="math/tex; mode=display">
 f(i,j)=\sum_{k=i}^n (-1)^{k-i} \binom{k}{i}g(k,j)</script><p>对答案简单推导：</p>
@@ -415,9 +422,9 @@ f(i,j)=\sum_{k=i}^n (-1)^{k-i} \binom{k}{i}g(k,j)</script><p>对答案简单推�
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Live"
+    <img class="site-author-image" itemprop="image" alt="Liveddd"
       src="/images/avatar.gif">
-  <p class="site-author-name" itemprop="name">Live</p>
+  <p class="site-author-name" itemprop="name">Liveddd</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -425,7 +432,7 @@ f(i,j)=\sum_{k=i}^n (-1)^{k-i} \binom{k}{i}g(k,j)</script><p>对答案简单推�
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">147</span>
+          <span class="site-state-item-count">155</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -438,7 +445,7 @@ f(i,j)=\sum_{k=i}^n (-1)^{k-i} \binom{k}{i}g(k,j)</script><p>对答案简单推�
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">82</span>
+        <span class="site-state-item-count">85</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -487,20 +494,40 @@ f(i,j)=\sum_{k=i}^n (-1)^{k-i} \binom{k}{i}g(k,j)</script><p>对答案简单推�
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Live</span>
+  <span class="author" itemprop="copyrightHolder">Liveddd</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">489k</span>
+    <span title="站点总字数">526k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:24</span>
+    <span title="站点阅读时长">19:29</span>
 </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 

@@ -24,12 +24,12 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="[ARC154E] Reverse and Inversion">
 <meta property="og:url" content="http://example.com/2023/12/11/ARC154E-Reverse-and-Inversion/index.html">
-<meta property="og:site_name" content="Live&#39;s Blog">
+<meta property="og:site_name" content="Liveddd&#39;s Blog">
 <meta property="og:description" content="拆贡献 + 推式子，对性质的观察。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-11T03:34:01.000Z">
-<meta property="article:modified_time" content="2023-12-12T07:33:14.523Z">
-<meta property="article:author" content="Live">
+<meta property="article:modified_time" content="2023-12-18T06:12:30.836Z">
+<meta property="article:author" content="Liveddd">
 <meta property="article:tag" content="题解">
 <meta name="twitter:card" content="summary">
 
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>[ARC154E] Reverse and Inversion | Live's Blog</title>
+  <title>[ARC154E] Reverse and Inversion | Liveddd's Blog</title>
   
 
 
@@ -97,10 +97,10 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Live's Blog</h1>
+      <h1 class="site-title">Liveddd's Blog</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">I am.</p>
+      <p class="site-subtitle" itemprop="description">愛にできることはまだあるかい</p>
   </div>
 
   <div class="site-nav-right">
@@ -195,12 +195,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Live">
+      <meta itemprop="name" content="Liveddd">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Live's Blog">
+      <meta itemprop="name" content="Liveddd's Blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -221,7 +221,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-12 15:33:14" itemprop="dateModified" datetime="2023-12-12T15:33:14+08:00">2023-12-12</time>
+                <time title="修改时间：2023-12-18 14:12:30" itemprop="dateModified" datetime="2023-12-18T14:12:30+08:00">2023-12-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -233,13 +233,20 @@
                 </span>
             </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>193</span>
+              <span>187</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -265,9 +272,9 @@
 f(p)=\sum_i i\cdot({\sum_{i>j}[p_i<p_j]-\sum_{i<j}[p_i>p_j]})</script><p>已知：</p>
 <script type="math/tex; mode=display">
 \begin{align}
-&\sum_{i>j}[p_i<p_j]+\sum_{i>j}[p_i>p_j]=\sum[i>j]=i-1\\\notag
-&\sum_{i>j}[p_i>p_j]+\sum_{i<j}[p_i>p_j]=\sum[p_i>p_j]=p_i-1\\\notag
-\end{align}</script><p>二者相减即可得到：</p>
+&\sum_{i>j}[p_i<p_j]+\sum_{i>j}[p_i>p_j]=\sum[i>j]=i-1\\
+&\sum_{i>j}[p_i>p_j]+\sum_{i<j}[p_i>p_j]=\sum[p_i>p_j]=p_i-1\\
+\end{align}</script><p>$(1)-(2)$ 即可得到：</p>
 <script type="math/tex; mode=display">
 {\sum_{i>j}[p_i<p_j]-\sum_{i<j}[p_i>p_j]}=i-p_i</script><p>所以最终 $f(p)=\sum_i i^2-i\cdot p_i$。$\sum_i i^2$ 为定值，我们相当于求 $E(\sum_i i\cdot p_i)$ 。</p>
 <p>地第一反应是 DP，每个数的贡献显然是独立的。我们考虑计算将位置 $i$ 上的数交换到位置 $j$ 上的概率。所有状态直接构成一个矩阵，直接矩阵快速幂优化一下 就可以做到 $\mathcal O(n^3\log m)$。</p>
@@ -365,9 +372,9 @@ f(p)=\sum_i i\cdot({\sum_{i>j}[p_i<p_j]-\sum_{i<j}[p_i>p_j]})</script><p>已知�
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Live"
+    <img class="site-author-image" itemprop="image" alt="Liveddd"
       src="/images/avatar.gif">
-  <p class="site-author-name" itemprop="name">Live</p>
+  <p class="site-author-name" itemprop="name">Liveddd</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -375,7 +382,7 @@ f(p)=\sum_i i\cdot({\sum_{i>j}[p_i<p_j]-\sum_{i<j}[p_i>p_j]})</script><p>已知�
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">147</span>
+          <span class="site-state-item-count">155</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -388,7 +395,7 @@ f(p)=\sum_i i\cdot({\sum_{i>j}[p_i<p_j]-\sum_{i<j}[p_i>p_j]})</script><p>已知�
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">82</span>
+        <span class="site-state-item-count">85</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -437,20 +444,40 @@ f(p)=\sum_i i\cdot({\sum_{i>j}[p_i<p_j]-\sum_{i<j}[p_i>p_j]})</script><p>已知�
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Live</span>
+  <span class="author" itemprop="copyrightHolder">Liveddd</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">489k</span>
+    <span title="站点总字数">526k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:24</span>
+    <span title="站点阅读时长">19:29</span>
 </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 

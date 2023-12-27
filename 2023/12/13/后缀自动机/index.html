@@ -20,14 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
   <style type="text/css">details.note,details.success,details.failure,details.warning,details.info,details.question,details.example,details.quote,details.code{display:block!important;padding-top:0!important;box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2)!important;position:relative!important;margin:1.5625em 0!important;padding:0 1em!important;border-left:.2em solid!important;border-radius:.1em!important;font-size:.9em!important;overflow:auto!important;}details.note:not([open]),details.success:not([open]),details.failure:not([open]),details.warning:not([open]),details.info:not([open]),details.question:not([open]),details.example:not([open]),details.quote:not([open]),details.code:not([open]){padding-bottom:0!important;}details.note{border-left-color:#448aff!important;}details.success{border-left-color:#00c853!important;}details.failure{border-left-color:#ff5252!important;}details.warning{border-left-color:#ff9100!important;}details.info{border-left-color:#00b8d4!important;}details.question{border-left-color:#64dd17!important;}details.example{border-left-color:#651fff!important;}details.quote{border-left-color:#9e9e9e!important;}details.code{border-left-color:#a0a0a0!important;}details.note>summary,details.success>summary,details.failure>summary,details.warning>summary,details.info>summary,details.question>summary,details.example>summary,details.quote>summary,details.code>summary{margin:0 -1em 1em -1em;padding:.4em .6em .4em .6em;border-bottom:.05em solid;font-weight:700;display:block;outline:none;cursor:pointer;}details.note>summary{border-bottom-color:rgba(68,138,255,.1);background-color:rgba(68,138,255,.1);}details.success>summary{border-bottom-color:rgba(0,200,83,.1);background-color:rgba(0,200,83,.1);}details.failure>summary{border-bottom-color:rgba(255,82,82,.1);background-color:rgba(255,82,82,.1);}details.warning>summary{border-bottom-color:rgba(255,145,0,.1);background-color:rgba(255,145,0,.1);}details.info>summary{border-bottom-color:rgba(0,184,212,.1);background-color:rgba(0,184,212,.1);}details.question>summary{border-bottom-color:rgba(100,221,23,.1);background-color:rgba(100,221,23,.1);}details.example>summary{border-bottom-color:rgba(101,31,255,.1);background-color:rgba(101,31,255,.1);}details.quote>summary{border-bottom-color:rgba(158,158,158,.1);background-color:rgba(158,158,158,.1);}details.code>summary{border-bottom-color:rgba(160,160,160,.1);background-color:rgba(160,160,160,.1);}details.note:not([open])>summary,details.success:not([open])>summary,details.failure:not([open])>summary,details.warning:not([open])>summary,details.info:not([open])>summary,details.question:not([open])>summary,details.example:not([open])>summary,details.quote:not([open])>summary,details.code:not([open])>summary{border-bottom:0;margin-bottom:0;}details.note>summary>div.box-open-button,details.success>summary>div.box-open-button,details.failure>summary>div.box-open-button,details.warning>summary>div.box-open-button,details.info>summary>div.box-open-button,details.question>summary>div.box-open-button,details.example>summary>div.box-open-button,details.quote>summary>div.box-open-button,details.code>summary>div.box-open-button{float:right;}details.note>summary>i,details.success>summary>i,details.failure>summary>i,details.warning>summary>i,details.info>summary>i,details.question>summary>i,details.example>summary>i,details.quote>summary>i,details.code>summary>i,details.note>summary>div.box-open-button>i,details.success>summary>div.box-open-button>i,details.failure>summary>div.box-open-button>i,details.warning>summary>div.box-open-button>i,details.info>summary>div.box-open-button>i,details.question>summary>div.box-open-button>i,details.example>summary>div.box-open-button>i,details.quote>summary>div.box-open-button>i,details.code>summary>div.box-open-button>i{margin:0 .6125em 0 .6125em;}details.note>summary>i{color:#448aff;}details.success>summary>i{color:#00c853;}details.failure>summary>i{color:#ff5252;}details.warning>summary>i{color:#ff9100;}details.info>summary>i{color:#00b8d4;}details.question>summary>i{color:#64dd17;}details.example>summary>i{color:#651fff;}details.quote>summary>i{color:#9e9e9e;}details.code>summary>i{color:#a0a0a0;}details.note>summary>div.box-open-button>i,details.success>summary>div.box-open-button>i,details.failure>summary>div.box-open-button>i,details.warning>summary>div.box-open-button>i,details.info>summary>div.box-open-button>i,details.question>summary>div.box-open-button>i,details.example>summary>div.box-open-button>i,details.quote>summary>div.box-open-button>i,details.code>summary>div.box-open-button>i{color:rgba(0,0,0,.26);}details[open].note>summary>div.box-open-button>i,details[open].success>summary>div.box-open-button>i,details[open].failure>summary>div.box-open-button>i,details[open].warning>summary>div.box-open-button>i,details[open].info>summary>div.box-open-button>i,details[open].question>summary>div.box-open-button>i,details[open].example>summary>div.box-open-button>i,details[open].quote>summary>div.box-open-button>i,details[open].code>summary>div.box-open-button>i{transform:rotate(180deg);}</style>
-  <meta property="og:type" content="article">
+  <meta name="description" content="强大的，什么都不会的，现在来补的。">
+<meta property="og:type" content="article">
 <meta property="og:title" content="后缀自动机">
 <meta property="og:url" content="http://example.com/2023/12/13/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA/index.html">
-<meta property="og:site_name" content="Live&#39;s Blog">
+<meta property="og:site_name" content="Liveddd&#39;s Blog">
+<meta property="og:description" content="强大的，什么都不会的，现在来补的。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-13T07:11:00.000Z">
-<meta property="article:modified_time" content="2023-12-13T07:11:00.743Z">
-<meta property="article:author" content="Live">
+<meta property="article:modified_time" content="2023-12-23T02:51:46.363Z">
+<meta property="article:author" content="Liveddd">
+<meta property="article:tag" content="字符串">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="后缀自动机">
+<meta property="article:tag" content="后缀数据结构">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://example.com/2023/12/13/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA/">
@@ -43,7 +49,7 @@
   };
 </script>
 
-  <title>后缀自动机 | Live's Blog</title>
+  <title>后缀自动机 | Liveddd's Blog</title>
   
 
 
@@ -94,10 +100,10 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Live's Blog</h1>
+      <h1 class="site-title">Liveddd's Blog</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">I am.</p>
+      <p class="site-subtitle" itemprop="description">愛にできることはまだあるかい</p>
   </div>
 
   <div class="site-nav-right">
@@ -192,12 +198,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Live">
+      <meta itemprop="name" content="Liveddd">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Live's Blog">
+      <meta itemprop="name" content="Liveddd's Blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -213,21 +219,44 @@
 
               <time title="创建时间：2023-12-13 15:11:00" itemprop="dateCreated datePublished" datetime="2023-12-13T15:11:00+08:00">2023-12-13</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-12-23 10:51:46" itemprop="dateModified" datetime="2023-12-23T10:51:46+08:00">2023-12-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/" itemprop="url" rel="index"><span itemprop="name">OI</span></a>
+                </span>
+            </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>0</span>
+              <span>5.8k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>13 分钟</span>
             </span>
 
         </div>
@@ -239,7 +268,95 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <p>强大的，什么都不会的，现在来补的。</p>
+<span id="more"></span>
+<h2 id="0-结构"><a href="#0-结构" class="headerlink" title="0.结构"></a>0.结构</h2><p>SAM 是一张有向无环图。结点被称作 <strong>状态</strong>，边被称作状态间的 <strong>转移</strong>。<br>图存在一个源点 $t_0$，称作 <strong>初始状态</strong>，其它各结点均可从 $t_0$ 出发到达。<br>每个 <strong>转移</strong> 都标有一些字母。从一个结点出发的所有转移均 <strong>不同</strong>。存在一个或多个 <strong>终止状态</strong>。如果我们从初始状态 $t_0$ 出发，最终转移到了一个终止状态，则路径上的所有转移连接起来一定是字符串 $s$ 的一个后缀。$s$ 的每个后缀均可用一条从 $t_0$ 到某个终止状态的路径构成。在所有满足上述条件的自动机中，SAM 的结点数是最少的。</p>
+<p>直观上，字符串的 SAM 可以理解为给定字符串的所有子串的压缩形式。值得注意的事实是，SAM 将所有的这些信息以高度压缩的形式储存。对于一个长度为 $n$ 的字符串，它的空间复杂度为 $O(n)$。构造 SAM 的时间复杂度仅为 $O(n)$。并且一个 SAM 最多有 $2n-1$ 个节点和 $3n-4$ 条转移边。</p>
+<p>SAM 最简单、也最重要的性质是，它包含关于字符串 $s$ 的所有子串的信息。任意从初始状态 $t_0$ 开始的路径，如果我们将转移路径上的标号写下来，都会形成 $s$ 的一个子串。</p>
+<h2 id="1-构造"><a href="#1-构造" class="headerlink" title="1.构造"></a>1.构造</h2><p>先介绍一些线性构造 SAM 的关键。 </p>
+<h3 id="1-1-结束位置-endpos"><a href="#1-1-结束位置-endpos" class="headerlink" title="1.1 结束位置 endpos"></a>1.1 结束位置 endpos</h3><p>对于 $s$ 的任意非空字串 $t$ 的，我们记  $\operatorname{endpos}(t)$ 为 $t$ 在 $s$ 中所有出现位置的集合。</p>
+<p>若 $\operatorname{endpos}(t_1)=\text{endpos}(t_2)$，我们则称 $t_1,t_2$ 属于同一个等价类。而 SAM 中的每个状态就对应着所有等价类。并且我们容易得到以下几条引理：</p>
+<p><strong>引理 1：</strong> 字符串 $s$ 的两个非空子串 $u$ 和 $w$（假设 $\left|u\right|\le \left|w\right|$）的 $\operatorname{endpos}$ 相同，当且仅当字符串 $u$ 在 $s$ 中的每次出现，都是以 $w$ 后缀的形式存在的。</p>
+<p><strong>引理 2：</strong> 考虑两个非空子串 $u$ 和 $w$（假设 $\left|u\right|\le \left|w\right|$）。那么要么 $\operatorname{endpos}(u)\cap \operatorname{endpos}(w)=\varnothing$，要么 $\operatorname{endpos}(w)\subseteq \operatorname{endpos}(u)$，取决于 $u$ 是否为 $w$ 的一个后缀。</p>
+<p><strong>引理 3：</strong> 考虑一个 $\operatorname{endpos}$ 等价类，将类中的所有子串按长度非递增的顺序排序。每个子串都不会比它前一个子串长，与此同时每个子串也是它前一个子串的后缀。换句话说，对于同一等价类的任一两子串，较短者为较长者的后缀，且该等价类中的子串长度恰好覆盖整个区间 $[x,y]$。</p>
+<h3 id="1-2-后缀链接-link"><a href="#1-2-后缀链接-link" class="headerlink" title="1.2 后缀链接 link"></a>1.2 后缀链接 link</h3><p>对于状态 $v$ 所代表的等价类，我们设其中最长的子串为 $w$，等价类中其余子串均为 $w$ 的后缀。$\operatorname{link}(v)$ 连接到 $w$ 的最长后缀的对应的另一个等价类上。</p>
+<p>容易发现， 所有后缀链接构成一棵根节点为 $t_0$ 的树。并且，通过 $\operatorname{endpos}$ 集合构造的树（每个子节点的 $\textit{subset}$ 都包含在父节点的 $\textit{subset}$ 中）与通过后缀链接 $\operatorname{link}$ 构造的树相同。这棵树我们称之为 parent 树。</p>
+<p>那么线性状态数就好理解了，我们视作不断将 父亲节点对应的集合 分裂成若干个 儿子节点对应的子集，这些子集或不相交。这样显然最多分 $n-1$ 次，最终最多剩 $n$ 个节点，所以等价类个数即状态个数最多有 $2n-1$ 个。</p>
+<h3 id="1-3-过程"><a href="#1-3-过程" class="headerlink" title="1.3 过程"></a>1.3 过程</h3><ul>
+<li><p>令 $\textit{last}$ 为添加原串第 $i$ 个字符 $c$ 之前，整个字符串对应的状态（一开始我们设 $\textit{last}=0$，算法的最后一步更新 $\textit{last}$）。</p>
+</li>
+<li><p>创建一个新的状态 $\textit{cur}$，并将 $\operatorname{len}(\textit{cur})$ 赋值为 $\operatorname{len}(\textit{last})+1$，在这时 $\operatorname{link}(\textit{cur})$ 的值还未知。</p>
+<p>——此时 $\textit{cur}$ 对应着一个全新的等价类，就代表着 当前已加入的字符串，$\operatorname{endpos}(\textit{cur})$ 为 ${i}$。</p>
+</li>
+<li><p>现在我们按以下流程进行（从状态 $\textit{last}$ 开始）。如果还没有到字符 $c$ 的转移，我们就添加一个到状态 $\textit{cur}$ 的转移，遍历后缀链接。如果在某个点已经存在到字符 $c$ 的转移，我们就停下来，并将这个状态标记为 $p$。</p>
+</li>
+<li><p>如果没有找到这样的状态 $p$，我们就到达了虚拟状态 $-1$，我们将 $\operatorname{link}(\textit{cur})$ 赋值为 $0$ 并退出。</p>
+</li>
+<li><p>假设现在我们找到了一个状态 $p$，其可以通过字符 $c$ 转移。我们将转移到的状态标记为 $q$。</p>
+<p>——相当于我们不断在 $last$ 对应的后缀中找等价类，并且添加转移边。如果找到一个存在该转移边的状态，那么显然当前等价类 $\textit{cur}$ 的 $\operatorname{endpos}(\textit{cur})$ 的 超集 在之前就已经出现过。我们需要进一步讨论。</p>
+</li>
+<li><p>现在我们分类讨论两种状态，要么 $\operatorname{len}(p) + 1 = \operatorname{len}(q)$，要么不是。</p>
+</li>
+<li><p>如果 $\operatorname{len}(p)+1=\operatorname{len}(q)$，我们只要将 $\operatorname{link}(\textit{cur})$ 赋值为 $q$ 并退出。</p>
+<p>——这里显然 $\textit{cur}$ 的父亲节点是 $q$。</p>
+</li>
+<li><p>否则就会有些复杂。需要 <strong>复制</strong> 状态 $q$：我们创建一个新的状态 $\textit{clone}$，复制 $q$ 的除了 $\operatorname{len}$ 的值以外的所有信息（后缀链接和转移）。我们将 $\operatorname{len}(\textit{clone})$ 赋值为 $\operatorname{len}(p)+1$。  </p>
+<p>复制之后，我们将后缀链接从 $\textit{cur}$ 指向 $\textit{clone}$，也从 $q$ 指向 $\textit{clone}$。  </p>
+<p>最终我们需要使用后缀链接从状态 $p$ 往回走，只要存在一条通过 $p$ 到状态 $q$ 的转移，就将该转移重定向到状态 $\textit{clone}$。</p>
+<p>——这意味着，$q$ 等价类中还存在其它更大的子串。于是我们需要分裂等价类，需要将 $q$ 重新分裂为 $\textit{clone},q’$ 两个等价类，其中 $\operatorname{len}(\textit{clone})=\operatorname{len}(p)+1$。 </p>
+</li>
+<li><p>以上三种情况，在完成这个过程之后，我们将 $\textit{last}$ 的值更新为状态 $\textit{cur}$。</p>
+</li>
+</ul>
+<p>理解以上过程就会感觉很清晰很正确！我们可以证明上述构造过程操作数是线性的，不过证明此处略去。最终我们在 $\mathcal O(n)$ 的时间复杂度以内完成对 SAM 构造。代码比较简洁。</p>
+<h3 id="1-4-实现"><a href="#1-4-实现" class="headerlink" title="1.4 实现"></a>1.4 实现</h3><details class="code" open><summary><i class="fab fa-code fa-fw"></i>Code<div class="box-open-button"><i class="fa fa-chevron-down fa-fw"></i></div></summary>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> SAM</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">Node</span>&#123;<span class="type">int</span> fa,len,ne[C];&#125;g[N&lt;&lt;<span class="number">1</span>];</span><br><span class="line">    <span class="type">int</span> tot=<span class="number">1</span>,last=<span class="number">1</span>;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">(<span class="type">int</span> c)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="type">int</span> p=last,x=last=++tot;</span><br><span class="line">        g[x].len=g[p].len+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(p&amp;&amp;!g[p].ne[c])</span><br><span class="line">            g[p].ne[c]=x,p=g[p].fa;</span><br><span class="line">        <span class="keyword">if</span>(!p)<span class="keyword">return</span> g[x].fa=<span class="number">1</span>,<span class="built_in">void</span>();</span><br><span class="line">        <span class="type">int</span> q=g[p].ne[c];</span><br><span class="line">        <span class="keyword">if</span>(g[q].len==g[p].len+<span class="number">1</span>)<span class="keyword">return</span> g[x].fa=q,<span class="built_in">void</span>();</span><br><span class="line">        <span class="type">int</span> nq=++tot;</span><br><span class="line">        g[nq]=g[q],g[nq].len=g[p].len+<span class="number">1</span>,g[x].fa=g[q].fa=nq;</span><br><span class="line">        <span class="keyword">while</span>(p&amp;&amp;g[p].ne[c]==q)</span><br><span class="line">            g[p].ne[c]=nq,p=g[p].fa;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+</details>
+<h2 id="2-应用"><a href="#2-应用" class="headerlink" title="2.应用"></a>2.应用</h2><h3 id="2-1-检查字符串是否出现"><a href="#2-1-检查字符串是否出现" class="headerlink" title="2.1 检查字符串是否出现"></a>2.1 检查字符串是否出现</h3><blockquote>
+<p>给一个文本串 $T$ 和多个模式串 $P$，我们要检查字符串 $P$ 是否作为 $T$ 的一个子串出现。</p>
+</blockquote>
+<p>我们直接在 SAM 跑即可，时间复杂度 $\mathcal O(|P|)$。</p>
+<h3 id="2-2-不同子串个数"><a href="#2-2-不同子串个数" class="headerlink" title="2.2 不同子串个数"></a>2.2 不同子串个数</h3><blockquote>
+<p>给一个字符串 $S$，计算不同子串的个数。</p>
+</blockquote>
+<p>每个 $S$ 的子串都相当于自动机中的一些路径。因此不同子串的个数等于自动机中以 $t_0$ 为起点的不同路径的条数。简单 DP 求解即可。</p>
+<p>那如果我们要动态维护，即查询每个前缀的答案？我们每次考虑当前新增的等价类 $i$。因为 SAM 上等价类对应着一段长度为连续区间的后缀，所以新增的未出现的子串就是 $\operatorname{len}(i)-\operatorname{len}(\operatorname{link}(i))$，对其求和即可。</p>
+<p>二者时间复杂度均为 $\mathcal O(|S|)$。</p>
+<h3 id="2-3-所有不同子串的总长度"><a href="#2-3-所有不同子串的总长度" class="headerlink" title="2.3 所有不同子串的总长度"></a>2.3 所有不同子串的总长度</h3><blockquote>
+<p>给定一个字符串 $S$，计算所有不同子串的总长度。</p>
+</blockquote>
+<p>与 2.2 相当类似，我们可以使用 DP 直接求解。也可以考虑新增的等价类 $i$，那么就是一个等差数列求和了。</p>
+<p>二者时间复杂度均为 $\mathcal O(|S|)$。</p>
+<h3 id="2-4-字典序第-k-大子串"><a href="#2-4-字典序第-k-大子串" class="headerlink" title="2.4 字典序第 $k$ 大子串"></a>2.4 字典序第 $k$ 大子串</h3><p>先一遍简单 DP 求出后继状态的路径数。再 DFS 直接找就行了。单词查询时间复杂度 $\mathcal O(|ans|\cdot |\Sigma|)$，$|ans|$ 为答案长度。</p>
+<h3 id="2-5-最小循环移位"><a href="#2-5-最小循环移位" class="headerlink" title="2.5 最小循环移位"></a>2.5 最小循环移位</h3><blockquote>
+<p>给定一个字符串 $S$。找出字典序最小的循环移位。</p>
+</blockquote>
+<p>容易发现字符串 $S+S$ 包含字符串 $S$ 的所有循环移位作为子串。</p>
+<p>所以问题简化为在 $S+S$ 对应的后缀自动机上寻找最小的长度为 $\left|S\right|$ 的路径。我们从初始状态开始，贪心地访问最小的字符即可，时间复杂度为 $\mathcal O(\left|S\right|)$。</p>
+<p>用最小表示法也可以简单做到 $\mathcal O(\left|S\right|)$。</p>
+<h3 id="2-6-出现次数"><a href="#2-6-出现次数" class="headerlink" title="2.6 出现次数"></a>2.6 出现次数</h3><blockquote>
+<p>对于一个给定的文本串 $T$，有多组询问，每组询问给一个模式串 $P$，回答模式串 $P$ 在字符串 $T$ 中作为子串出现了多少次。</p>
+</blockquote>
+<p>利用 parent 树，DFS 求出每个节点的终点集合的大小。再把 $P$ 放在 PAM 上跑，输出终点集合的大小即可。时间复杂度 $\mathcal O(|T|+\sum|P|)$。</p>
+<h3 id="2-7-第一次出现的位置"><a href="#2-7-第一次出现的位置" class="headerlink" title="2.7 第一次出现的位置"></a>2.7 第一次出现的位置</h3><p>与 2.6 类似，不过求出每个节点的终点集合最靠前的位置即可。其实这个过程中也可在 动态建 SAM 的过程中维护。</p>
+<h3 id="2-8-所有出现的位置"><a href="#2-8-所有出现的位置" class="headerlink" title="2.8 所有出现的位置"></a>2.8 所有出现的位置</h3><p>与 2.6 类似，遍历 parent 树上所有重点集合即可。</p>
+<h3 id="2-9-最短的没有出现的字符串"><a href="#2-9-最短的没有出现的字符串" class="headerlink" title="2.9 最短的没有出现的字符串"></a>2.9 最短的没有出现的字符串</h3><p>容易考虑 DP，我们假设所有原本不存在的转移边 连向 $t_1$，我们相当于找一条从 $t_0\to t_1$ 最短的路径，简单 DP 即可。时间复杂度  $\mathcal O(|S|)$。</p>
+<h3 id="2-10-两个字符串的最长公共子串"><a href="#2-10-两个字符串的最长公共子串" class="headerlink" title="2.10 两个字符串的最长公共子串"></a>2.10 两个字符串的最长公共子串</h3><blockquote>
+<p>给定两个字符串 $S$ 和 $T$，求出最长公共子串，公共子串定义为在 $S$ 和 $T$ 中都作为子串出现过的字符串 $X$。</p>
+</blockquote>
+<p>先建出 $S$ 的 SAM，考虑 $T$  的子串在 SAM 上的情况。直接在 SAM 跑，设当前最长公共子串在 SAM 上状态为 $u$，其长度为 $l$。考虑下一位 $T_i$ 的转移是否存在：</p>
+<ol>
+<li>存在转移 $(u,v,T_i)$，那么 $u\to v$，$l\to l+1$。</li>
+<li>不存在转移  $(u,v,T_i)$，那么状态 $u\to \operatorname{link}(u)$，$l\to \operatorname{len}(link(u))$。重新考虑下一位 $T_i$ 的转移是否存在。</li>
+</ol>
+<p>显然每次 $l$ 的变化量为 $\mathcal O(|T|)$，最终哦我们取最大值即可，所以总的时间复杂度为 $\mathcal O(|S|+|T|)$。</p>
+<h3 id="2-11-多个字符串间的最长公共子串"><a href="#2-11-多个字符串间的最长公共子串" class="headerlink" title="2.11 多个字符串间的最长公共子串"></a>2.11 多个字符串间的最长公共子串</h3><blockquote>
+<p>给定 $k$ 个字符串 $S_i$。我们需要找到它们的最长公共子串，即作为子串出现在每个字符串中的字符串 $X$。</p>
+</blockquote>
+<p>一个单纯的想法是，我们选取一个最短的字符串 $S_i$ 建 SAM，对于其余字符串，都采用与 2.10 类似的方式进行处理。不过不同的是，我们将这些状态 $u$ 直接在 parent 树上标记，并记录最长匹配长度。再在 parent 树上求子树 max。最终对于每个状态，每个串在该状态上最长匹配长度取 min，最终再取最大值即可得到答案。</p>
+<p>最终时间复杂度就是 $\mathcal O(\sum|S|)$。</p>
+
     </div>
 
     
@@ -247,6 +364,12 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag"># 字符串</a>
+              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
+              <a href="/tags/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA/" rel="tag"># 后缀自动机</a>
+              <a href="/tags/%E5%90%8E%E7%BC%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"># 后缀数据结构</a>
+          </div>
 
         
 
@@ -320,14 +443,15 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-%E7%BB%93%E6%9E%84"><span class="nav-text">0.结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%9E%84%E9%80%A0"><span class="nav-text">1.构造</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E7%BB%93%E6%9D%9F%E4%BD%8D%E7%BD%AE-endpos"><span class="nav-text">1.1 结束位置 endpos</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E5%90%8E%E7%BC%80%E9%93%BE%E6%8E%A5-link"><span class="nav-text">1.2 后缀链接 link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E8%BF%87%E7%A8%8B"><span class="nav-text">1.3 过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-%E5%AE%9E%E7%8E%B0"><span class="nav-text">1.4 实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%BA%94%E7%94%A8"><span class="nav-text">2.应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E6%A3%80%E6%9F%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%98%AF%E5%90%A6%E5%87%BA%E7%8E%B0"><span class="nav-text">2.1 检查字符串是否出现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E4%B8%8D%E5%90%8C%E5%AD%90%E4%B8%B2%E4%B8%AA%E6%95%B0"><span class="nav-text">2.2 不同子串个数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E6%89%80%E6%9C%89%E4%B8%8D%E5%90%8C%E5%AD%90%E4%B8%B2%E7%9A%84%E6%80%BB%E9%95%BF%E5%BA%A6"><span class="nav-text">2.3 所有不同子串的总长度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-%E5%AD%97%E5%85%B8%E5%BA%8F%E7%AC%AC-k-%E5%A4%A7%E5%AD%90%E4%B8%B2"><span class="nav-text">2.4 字典序第 $k$ 大子串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-%E6%9C%80%E5%B0%8F%E5%BE%AA%E7%8E%AF%E7%A7%BB%E4%BD%8D"><span class="nav-text">2.5 最小循环移位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0"><span class="nav-text">2.6 出现次数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-7-%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%87%BA%E7%8E%B0%E7%9A%84%E4%BD%8D%E7%BD%AE"><span class="nav-text">2.7 第一次出现的位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-8-%E6%89%80%E6%9C%89%E5%87%BA%E7%8E%B0%E7%9A%84%E4%BD%8D%E7%BD%AE"><span class="nav-text">2.8 所有出现的位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-9-%E6%9C%80%E7%9F%AD%E7%9A%84%E6%B2%A1%E6%9C%89%E5%87%BA%E7%8E%B0%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-text">2.9 最短的没有出现的字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-10-%E4%B8%A4%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E4%B8%B2"><span class="nav-text">2.10 两个字符串的最长公共子串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-11-%E5%A4%9A%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%97%B4%E7%9A%84%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E4%B8%B2"><span class="nav-text">2.11 多个字符串间的最长公共子串</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Live"
+    <img class="site-author-image" itemprop="image" alt="Liveddd"
       src="/images/avatar.gif">
-  <p class="site-author-name" itemprop="name">Live</p>
+  <p class="site-author-name" itemprop="name">Liveddd</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -335,7 +459,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">147</span>
+          <span class="site-state-item-count">155</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -348,7 +472,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">82</span>
+        <span class="site-state-item-count">85</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -397,20 +521,40 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Live</span>
+  <span class="author" itemprop="copyrightHolder">Liveddd</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">489k</span>
+    <span title="站点总字数">526k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:24</span>
+    <span title="站点阅读时长">19:29</span>
 </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
