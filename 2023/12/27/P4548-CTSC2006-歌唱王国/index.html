@@ -28,12 +28,13 @@
 <meta property="og:description" content="很有趣的期望题目。可以使用概率意义求解，也可以使用概率生成函数 PGF 求解，还可以直接 DP 求解。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-27T00:27:09.000Z">
-<meta property="article:modified_time" content="2023-12-27T01:41:45.014Z">
+<meta property="article:modified_time" content="2024-01-05T06:21:05.601Z">
 <meta property="article:author" content="Liveddd">
 <meta property="article:tag" content="题解">
 <meta property="article:tag" content="DP">
 <meta property="article:tag" content="KMP">
 <meta property="article:tag" content="生成函数">
+<meta property="article:tag" content="多项式">
 <meta property="article:tag" content="概率论">
 <meta name="twitter:card" content="summary">
 
@@ -217,10 +218,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-12-27 08:27:09 / 修改时间：09:41:45" itemprop="dateCreated datePublished" datetime="2023-12-27T08:27:09+08:00">2023-12-27</time>
+              <time title="创建时间：2023-12-27 08:27:09" itemprop="dateCreated datePublished" datetime="2023-12-27T08:27:09+08:00">2023-12-27</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-01-05 14:21:05" itemprop="dateModified" datetime="2024-01-05T14:21:05+08:00">2024-01-05</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -244,14 +251,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>914</span>
+              <span>3.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>7 分钟</span>
             </span>
 
         </div>
@@ -269,12 +276,45 @@
 <p>概率意义解法确实很巧妙。设字符集大小为 $c$。假设这里是一个赌场，每一个时刻都有一个赌徒。赌博方式是，赌徒在 $t$ 时刻用 $x$ 枚钱币赌下一秒出现 $y$，赌对了则返还 $cx$ 枚钱币。这显然是一个公平赌博游戏。赌徒最开始在下一秒赌出现 $a_1$，赌错了则立刻跑路，赌对了则用获得所有钱币，继续赌下秒出现 $a_2$，以此类推。直到最终出现出现了整个名字 $a$，此时赌场关闭。整个过程结束。</p>
 <p>考虑结束前出现的整个名字 $a$。根据上述过程容易发现，只有 在这段字符串的 Border 对应的后缀（假设包含原串）出现赌徒会获得收益，并且设 Border 长度为 $x$，那么对应位置的赌徒获得的收益为 $c^x$。其余位置的赌徒收益均为 $0$。</p>
 <p>此时关键来了，由于是公平赌博游戏，所以赌场的赚与赔是不受赌徒与赌场采用的策略影响的。意味着赌场期望收益为 $0$。又因为赌场向获得收益的赌徒支付了 $\displaystyle \sum_{i\in \operatorname{Border}(S)} c^i$，所以期望有 $\displaystyle \sum_{i\in \operatorname{Border}(S)} c^i$ 个赌徒才会出现赌场关闭的情况。所以得出答案就是 $\displaystyle \sum_{i\in \operatorname{Border}(S)} c^i$。    </p>
-<h2 id="概率生成函数-PGF"><a href="#概率生成函数-PGF" class="headerlink" title="概率生成函数 PGF"></a>概率生成函数 PGF</h2><p>这个也挺牛逼的。</p>
+<h2 id="概率生成函数-PGF"><a href="#概率生成函数-PGF" class="headerlink" title="概率生成函数 PGF"></a>概率生成函数 PGF</h2><p>这个也挺牛的。感觉很像 <a target="_blank" rel="noopener" href="https://kevinlive.github.io/2023/12/25/P1393-Mivik-%E7%9A%84%E6%A0%87%E9%A2%98/">P1393 Mivik 的标题</a> 中生成函数的解法。</p>
 <p>我们介绍概率生成函数 PGF：</p>
 <script type="math/tex; mode=display">
 F(x)=\sum_{i=0}^{+\infty} P(X=i)x^i</script><p>比较显然的一点是 $F(1)=1$。我们如何与期望建立联系？我们似乎需要在系数上再乘上一个 $i$。比较妙的是，我们考虑对 $F(x)$ 求导得到 $F’(x)$：</p>
 <script type="math/tex; mode=display">
 F'(x)=\sum_{i=1}^{+\infty}P(X=i)\cdot i x^{i-1}</script><p>我们就得到了 $F’(1)=E(X)$。总结一下，我们得到 $F(1)=1,F’(1)=E(X)$。</p>
+<p>考虑原问题，设 $f(i)$ 表示在 $i$ 时刻结束的概率，$g(i)$ 表示在 $i$ 时刻仍不结束的概率。与之对应，设 $F(x)$ 为 $f(i)$ 的 PGF，$G(x)$ 为 $g(i)$ 的 PGF。接下来的步骤和 <a target="_blank" rel="noopener" href="https://kevinlive.github.io/2023/12/25/P1393-Mivik-%E7%9A%84%E6%A0%87%E9%A2%98/">P1393 Mivik 的标题</a> 一样的套路。先列出关系式再进行一些变换。</p>
+<p>考虑在当前情况下再加入一个字符，那么接下来要么结束，要么不结束，得到：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+G(x)x+1=F(x)+G(x)
+\end{align}</script><p>考虑在当前情况下直接加入一个名字，但是因为 Border 的缘故，过程中可能会提前结束。们构造 $H(x)$ 表示 Border 长度集合构成的数列对应的 OGF，中间对每一项分别乘上 $\displaystyle (\frac{x}{c})^{n-i}$。得到关系：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+G(x)\cdot (\frac{x}{c})^n=F(x)H(x)
+\end{align}</script><p>接下来利用 PGF 的性质，进行一些变换。直接对 $(1)$ 式两边求导得到：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+G'(x)x+G(x)=F'(x)+G'(x)\notag
+\end{align}</script><p>由于 PGF 的良好性质，我们要求的就是 $F’(1)$，于是直接将 $x=1$ 代入得：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+G'(1)+G(1)&=F'(1)+G'(1)\notag\\
+F'(1)&=G(1)\notag\\
+\end{align}</script><p>令人意想不到的等式！继续将 $x=1$ 带入 $(2)$ 式：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+G(1)\cdot (\frac{1}{c})^n=F(1)H(1)\notag
+\end{align}</script><p>有 $F(x)=1$（注意 $G(1)$ 显然不等于 $1$），于是得到；</p>
+<script type="math/tex; mode=display">
+\begin{align}
+G(1)\cdot (\frac{1}{c})^n=H(1)\notag\\
+G(1)=\sum_{i\in \operatorname{Border}(S)} c^i\notag\\
+\end{align}</script><p>得到了和利用 <strong>概率意义</strong> 所推出来一模一样的式子。只需做一遍 KMP 求出所有 Border ，然后计算即可，时间复杂度为 $\mathcal O(n)$。</p>
+<details class="success"><summary><i class="fa fa-check fa-fw"></i>Code<div class="box-open-button"><i class="fa fa-chevron-down fa-fw"></i></div></summary>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">1e5</span>+<span class="number">10</span>,mod=<span class="number">1e4</span>;</span><br><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">read</span><span class="params">(T &amp;x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    x=<span class="number">0</span>;<span class="type">bool</span> f=<span class="number">0</span>;</span><br><span class="line">    <span class="type">char</span> ch=<span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">while</span>(ch&lt;<span class="string">&#x27;0&#x27;</span>||ch&gt;<span class="string">&#x27;9&#x27;</span>)&#123;<span class="keyword">if</span>(ch==<span class="string">&#x27;-&#x27;</span>)f=<span class="number">1</span>;ch=<span class="built_in">getchar</span>();&#125;</span><br><span class="line">    <span class="keyword">while</span>(ch&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;ch&lt;=<span class="string">&#x27;9&#x27;</span>)x=(x&lt;&lt;<span class="number">1</span>)+(x&lt;&lt;<span class="number">3</span>)+(ch^<span class="number">48</span>),ch=<span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">if</span>(f)x=~x+<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T,<span class="keyword">class</span> ...T1&gt;</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">read</span><span class="params">(T &amp;x,T1 &amp;...x1)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">read</span>(x),<span class="built_in">read</span>(x1...);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> T,c,n;</span><br><span class="line"><span class="type">int</span> pw[N];</span><br><span class="line"><span class="type">int</span> a[N],ne[N];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">adj</span><span class="params">(<span class="type">int</span> &amp;x)</span></span>&#123;x+=x&gt;&gt;<span class="number">31</span>&amp;mod;&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">read</span>(n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)<span class="built_in">read</span>(a[i]),ne[i]=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>,j=<span class="number">0</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(j&amp;&amp;a[i]!=a[j+<span class="number">1</span>])j=ne[j];</span><br><span class="line">        <span class="keyword">if</span>(a[i]==a[j+<span class="number">1</span>])j++;</span><br><span class="line">        ne[i]=j;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=n;i;i=ne[i])<span class="built_in">adj</span>(ans+=pw[i]-mod);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%04d\n&quot;</span>,ans);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">read</span>(c,T);</span><br><span class="line">    c%=mod;</span><br><span class="line">    n=<span class="number">1e5</span>,pw[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)pw[i]=<span class="number">1ll</span>*pw[i<span class="number">-1</span>]*c%mod;</span><br><span class="line">    <span class="keyword">while</span>(T--)<span class="built_in">solve</span>();</span><br><span class="line">    <span class="keyword">return</span>  <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</details>
+<h2 id="DP"><a href="#DP" class="headerlink" title="DP"></a>DP</h2><p>方法与 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P6835">P6835 [Cnoi2020] 线形生物</a> 几乎一样，可以直接看<a target="_blank" rel="noopener" href="https://kevinlive.github.io/2022/06/16/%E9%9A%8F%E6%9C%BA100%E9%A2%98/#42-P6835-Cnoi2020-%E7%BA%BF%E5%BD%A2%E7%94%9F%E7%89%A9">这里</a>。过程求出所有 Border 再 DP 即可，此处不再赘述。</p>
 
     </div>
 
@@ -288,6 +328,7 @@ F'(x)=\sum_{i=1}^{+\infty}P(X=i)\cdot i x^{i-1}</script><p>我们就得到了 $F
               <a href="/tags/DP/" rel="tag"># DP</a>
               <a href="/tags/KMP/" rel="tag"># KMP</a>
               <a href="/tags/%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0/" rel="tag"># 生成函数</a>
+              <a href="/tags/%E5%A4%9A%E9%A1%B9%E5%BC%8F/" rel="tag"># 多项式</a>
               <a href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" rel="tag"># 概率论</a>
           </div>
 
@@ -300,7 +341,10 @@ F'(x)=\sum_{i=1}^{+\infty}P(X=i)\cdot i x^{i-1}</script><p>我们就得到了 $F
     <a href="/2023/12/25/P1393-Mivik-%E7%9A%84%E6%A0%87%E9%A2%98/" rel="prev" title="P1393 Mivik 的标题">
       <i class="fa fa-chevron-left"></i> P1393 Mivik 的标题
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2023/12/27/CF678F-Lena-and-Queries/" rel="next" title="CF678F Lena and Queries">
+      CF678F Lena and Queries <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -360,7 +404,7 @@ F'(x)=\sum_{i=1}^{+\infty}P(X=i)\cdot i x^{i-1}</script><p>我们就得到了 $F
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E7%8E%87%E6%84%8F%E4%B9%89"><span class="nav-text">概率意义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E7%8E%87%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0-PGF"><span class="nav-text">概率生成函数 PGF</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E7%8E%87%E6%84%8F%E4%B9%89"><span class="nav-text">概率意义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E7%8E%87%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0-PGF"><span class="nav-text">概率生成函数 PGF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DP"><span class="nav-text">DP</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -376,7 +420,7 @@ F'(x)=\sum_{i=1}^{+\infty}P(X=i)\cdot i x^{i-1}</script><p>我们就得到了 $F
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-count">180</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -389,7 +433,7 @@ F'(x)=\sum_{i=1}^{+\infty}P(X=i)\cdot i x^{i-1}</script><p>我们就得到了 $F
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">85</span>
+        <span class="site-state-item-count">93</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -434,7 +478,7 @@ F'(x)=\sum_{i=1}^{+\infty}P(X=i)\cdot i x^{i-1}</script><p>我们就得到了 $F
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -443,12 +487,12 @@ F'(x)=\sum_{i=1}^{+\infty}P(X=i)\cdot i x^{i-1}</script><p>我们就得到了 $F
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">526k</span>
+    <span title="站点总字数">597k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">19:29</span>
+    <span title="站点阅读时长">22:06</span>
 </div>
 
         
